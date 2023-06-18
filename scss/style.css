@@ -1,0 +1,239 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.5s;
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  font-family: "Raleway";
+}
+
+.mySwiper {
+  width: 100%;
+  height: 100%;
+}
+.mySwiper .contSwip {
+  width: 100%;
+  height: 100%;
+}
+.mySwiper .contSwip .swip {
+  font-size: 80px;
+  width: 100%;
+  height: 100%;
+  opacity: 0 !important;
+}
+.mySwiper .contSwip .swip .head {
+  width: 100%;
+  height: 100%;
+  background-image: url(../icon/headFon.png);
+  background-size: 100%;
+  background-position: right;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.mySwiper .contSwip .swip .head .block {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.mySwiper .contSwip .swip .head .block .logo {
+  width: 20%;
+  height: 25%;
+  border: 7px solid #202E66;
+  padding: 10px;
+}
+.mySwiper .contSwip .swip .head .block .logo img {
+  width: 100%;
+}
+.mySwiper .contSwip .swip .head .block .text h2 {
+  font-weight: 400;
+  font-size: 65.1281px;
+  line-height: 100%;
+  color: #202E66;
+  opacity: 0.6;
+}
+.mySwiper .contSwip .swip .head .block .text h1 {
+  font-weight: 700;
+  font-size: 166.725px;
+  line-height: 100%;
+  color: #202E66;
+  text-transform: uppercase;
+}
+.mySwiper .contSwip .swip .head .block:nth-child(2) {
+  align-items: center !important;
+}
+.mySwiper .contSwip .swip .head .block:nth-child(2) img {
+  width: 100%;
+}
+.mySwiper .contSwip .swip .price .box {
+  max-width: 1140px;
+  margin: 0 auto;
+  overflow-y: auto;
+  height: 100%;
+  padding: 20px;
+}
+.mySwiper .contSwip .swip .price .box h2 {
+  font-weight: 700;
+  font-size: 86.725px;
+  line-height: 50%;
+  text-align: center;
+  color: #202E66;
+  margin-bottom: 50px;
+}
+.mySwiper .contSwip .swip .price .box .swipCont {
+  width: 100%;
+  height: 100%;
+}
+.mySwiper .contSwip .swip .price .box .swipCont .mySwiper1 {
+  height: 100%;
+  width: 100%;
+}
+.mySwiper .contSwip .swip .price .box .swipCont .mySwiper1 .swipcont1 {
+  height: 100%;
+  width: 100%;
+  margin-bottom: 40px;
+}
+.mySwiper .contSwip .swip .price .box .swipCont .mySwiper1 .swipcont1 .swip1 {
+  padding: 0 50px;
+}
+.mySwiper .contSwip .swip .price .box .swipCont .mySwiper1 .swipcont1 .swip1 .swipbox {
+  background-color: #25764E;
+  padding-bottom: 30px;
+}
+.mySwiper .contSwip .swip .price .box .swipCont .mySwiper1 .swipcont1 .swip1 .swipbox .img {
+  width: 100%;
+}
+.mySwiper .contSwip .swip .price .box .swipCont .mySwiper1 .swipcont1 .swip1 .swipbox .img img {
+  width: 100%;
+}
+.mySwiper .contSwip .swip .price .box .swipCont .mySwiper1 .swipcont1 .swip1 .swipbox .text {
+  color: #fff;
+  font-family: "Raleway";
+  margin-left: 10%;
+}
+.mySwiper .contSwip .swip .price .box .swipCont .mySwiper1 .swipcont1 .swip1 .swipbox .text h3 {
+  font-weight: 700;
+  font-size: 60.4707px;
+  line-height: 60%;
+  text-transform: uppercase;
+}
+.mySwiper .contSwip .swip .price .box .swipCont .mySwiper1 .swipcont1 .swip1 .swipbox .text h4 {
+  font-weight: 700;
+  font-size: 31.4312px;
+  line-height: 100%;
+  text-transform: lowercase;
+  opacity: 0.6;
+}
+.mySwiper .contSwip .swip .price .box .swipCont .mySwiper1 .swipcont1 .swip1 .swipbox .text p {
+  font-weight: 400;
+  font-size: 14.4312px;
+  line-height: 100%;
+  opacity: 0.6;
+  margin-top: 20px;
+}
+.mySwiper .contSwip .swip .price .box .swipCont .mySwiper1 .castom {
+  display: flex;
+  position: relative !important;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 20px 20px;
+  margin-bottom: 20px;
+}
+.mySwiper .contSwip .swip .price .box .swipCont .mySwiper1 .castom .swiper-pagination {
+  transform: translateY(20%);
+}
+.mySwiper .contSwip .swip .content {
+  width: 100%;
+  height: 100%;
+}
+.mySwiper .contSwip .swip .content .box {
+  width: 25%;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 4%;
+}
+.mySwiper .contSwip .swip .content .box img {
+  width: 100%;
+}
+.mySwiper .contSwip .swip .content .box .prew {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-150%);
+  font-weight: 900;
+  font-size: 200.414px;
+  line-height: 100%;
+  left: -45%;
+  color: #fff;
+}
+.mySwiper .contSwip .swip .content .box .next {
+  position: absolute;
+  bottom: -25%;
+  transform: translateY(-150%);
+  font-weight: 900;
+  font-size: 200.414px;
+  line-height: 100%;
+  right: -35%;
+  color: #fff;
+  z-index: 11;
+}
+.mySwiper .contSwip .swip .content .box .sircl {
+  position: absolute;
+  animation: sircls 4s infinite linear;
+}
+.mySwiper .contSwip .swiper-slide-active {
+  opacity: 1 !important;
+}
+.mySwiper .contSwip .swiper-slide-active .swipcont1 .anim {
+  animation: animeleft 3s 1 ease;
+}
+.mySwiper .contSwip .swiper-slide-active .swipcont1 .anim1 {
+  animation: animeright 3s 1 ease;
+}
+
+@keyframes animeleft {
+  0% {
+    position: absolute;
+    left: -100%;
+    opacity: 0;
+  }
+  100% {
+    position: relative;
+    left: 0%;
+    opacity: 1;
+  }
+}
+@keyframes animeright {
+  0% {
+    position: absolute;
+    right: -100%;
+    opacity: 0;
+  }
+  100% {
+    position: relative;
+    right: 0%;
+    opacity: 1;
+  }
+}
+@keyframes sircls {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}/*# sourceMappingURL=style.css.map */

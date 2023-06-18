@@ -1,0 +1,306 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.5s;
+
+}
+
+@mixin flex($a, $s) {
+  display: flex;
+  align-items: $a;
+  justify-content: $s;
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  font-family: 'Raleway';
+}
+
+.mySwiper {
+  width: 100%;
+  height: 100%;
+
+  .contSwip {
+    width: 100%;
+    height: 100%;
+
+
+    .swip {
+      font-size: 80px;
+      width: 100%;
+      height: 100%;
+      opacity: 0 !important;
+
+
+      .head {
+        width: 100%;
+        height: 100%;
+        background-image: url(../icon/headFon.png);
+        background-size: 100%;
+        background-position: right;
+        background-repeat: no-repeat;
+        @include flex(center, center);
+        padding: 20px;
+
+        .block {
+          width: 50%;
+          height: 100%;
+
+          .logo {
+            width: 20%;
+            height: 25%;
+            border: 7px solid #202E66;
+            padding: 10px;
+
+            img {
+              width: 100%;
+            }
+          }
+
+          .text {
+            h2 {
+              font-weight: 400;
+              font-size: 65.1281px;
+              line-height: 100%;
+              color: #202E66;
+              opacity: 0.6;
+            }
+
+            h1 {
+              font-weight: 700;
+              font-size: 166.725px;
+              line-height: 100%;
+              color: #202E66;
+              text-transform: uppercase
+            }
+          }
+
+          @include flex(start, start);
+          flex-direction: column;
+          justify-content: space-between;
+
+          &:nth-child(2) {
+            // padding-top: 10%;
+
+            align-items: center !important;
+
+            img {
+              width: 100%;
+            }
+          }
+        }
+      }
+
+      .price {
+        .box {
+          max-width: 1140px;
+          margin: 0 auto;
+          overflow-y: auto;
+          height: 100%;
+
+          h2 {
+            font-weight: 700;
+            font-size: 86.725px;
+            line-height: 50%;
+            text-align: center;
+            color: #202E66;
+            margin-bottom: 50px;
+
+          }
+
+          padding: 20px;
+
+          .swipCont {
+            width: 100%;
+            height: 100%;
+
+
+            .mySwiper1 {
+              height: 100%;
+              width: 100%;
+
+              .swipcont1 {
+                height: 100%;
+                width: 100%;
+                margin-bottom: 40px;
+
+                .swip1 {
+
+
+                  padding: 0 50px;
+
+                  .swipbox {
+                    background-color: #25764E;
+                    padding-bottom: 30px;
+
+                    .img {
+                      width: 100%;
+
+                      img {
+                        width: 100%;
+                      }
+                    }
+
+                    .text {
+                      color: #fff;
+                      font-family: 'Raleway';
+                      margin-left: 10%;
+
+                      h3 {
+                        font-weight: 700;
+                        font-size: 60.4707px;
+                        line-height: 60%;
+
+                        text-transform: uppercase;
+                      }
+
+                      h4 {
+                        font-weight: 700;
+                        font-size: 31.4312px;
+                        line-height: 100%;
+                        text-transform: lowercase;
+                        opacity: 0.6;
+                      }
+
+                      p {
+                        font-weight: 400;
+                        font-size: 14.4312px;
+                        line-height: 100%;
+                        opacity: 0.6;
+                        margin-top: 20px;
+                      }
+                    }
+                  }
+
+
+                }
+              }
+
+              .castom {
+                display: flex;
+                position: relative !important;
+                align-items: center;
+                justify-content: center;
+                margin: 10px 20px 20px;
+                margin-bottom: 20px;
+
+                .swiper-pagination {
+
+                  transform: translateY(20%);
+                }
+              }
+
+            }
+          }
+        }
+      }
+
+      .content {
+        width: 100%;
+        height: 100%;
+        
+
+        .box {
+          width: 25%;
+          margin: 0 auto;
+          height: 100%;
+          @include flex(center, center);
+          position: relative;
+          padding: 4%;
+
+          img {
+            width: 100%;
+          }
+
+          .prew {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-150%);
+            font-weight: 900;
+            font-size: 200.414px;
+            line-height: 100%;
+            left: -45%;
+            color: #fff;
+          }
+
+          .next {
+            position: absolute;
+            bottom: -25%;
+            transform: translateY(-150%);
+            font-weight: 900;
+            font-size: 200.414px;
+            line-height: 100%;
+            right: -35%;
+            color: #fff;
+            z-index: 11;
+          }
+
+          .sircl {
+            position: absolute;
+            animation: sircls 4s infinite linear;
+          }
+
+        }
+      }
+
+    }
+
+    .swiper-slide-active {
+      opacity: 1 !important;
+
+      .swipcont1 {
+        .anim {
+
+          animation: animeleft 3s 1 ease;
+        }
+
+        .anim1 {
+
+          animation: animeright 3s 1 ease;
+        }
+      }
+
+    }
+  }
+}
+
+@keyframes animeleft {
+  0% {
+    position: absolute;
+    left: -100%;
+    opacity: 0;
+  }
+
+  100% {
+    position: relative;
+    left: 0%;
+    opacity: 1;
+  }
+}
+
+@keyframes animeright {
+  0% {
+    position: absolute;
+    right: -100%;
+    opacity: 0;
+  }
+
+  100% {
+    position: relative;
+    right: 0%;
+    opacity: 1;
+  }
+}
+
+@keyframes sircls {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
