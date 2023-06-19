@@ -5,206 +5,541 @@
   transition: all 0.5s;
 }
 
-main {
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  font-family: "Raleway";
+@font-face {
+  font-family: "grec";
+  src: url("../font/dsgreece.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+li {
+  list-style-type: none;
 }
 
-.mySwiper {
+header {
+  font-family: "Raleway";
+  position: fixed;
   width: 100%;
-  height: 100%;
+  background: linear-gradient(0deg, rgba(196, 196, 196, 0.137) 23%, rgb(255, 255, 255) 100%);
+  -webkit-backdrop-filter: blur(40px);
+  backdrop-filter: blur(40px);
+  z-index: 11;
 }
-.mySwiper .contSwip {
-  width: 100%;
-  height: 100%;
+header nav {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 20px;
 }
-.mySwiper .contSwip .swip {
-  font-size: 80px;
-  width: 100%;
-  height: 100%;
-  opacity: 0 !important;
-}
-.mySwiper .contSwip .swip .head {
-  width: 100%;
-  height: 100%;
-  background-image: url(../icon/headFon.png);
-  background-size: 100%;
-  background-position: right;
-  background-repeat: no-repeat;
+header nav ul:nth-child(2) {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  gap: 20px;
 }
-.mySwiper .contSwip .swip .head .block {
-  width: 50%;
-  height: 100%;
-  display: flex;
-  align-items: start;
-  justify-content: start;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.mySwiper .contSwip .swip .head .block .logo {
-  width: 20%;
-  height: 25%;
-  border: 7px solid #202E66;
-  padding: 10px;
-}
-.mySwiper .contSwip .swip .head .block .logo img {
-  width: 100%;
-}
-.mySwiper .contSwip .swip .head .block .text h2 {
-  font-weight: 400;
-  font-size: 65.1281px;
+header nav ul:nth-child(2) a {
+  font-weight: 300;
+  font-size: 16px;
   line-height: 100%;
-  color: #202E66;
-  opacity: 0.6;
+  text-decoration: none;
+  color: #000;
+  text-transform: uppercase;
+  font-feature-settings: "pnum" on, "lnum" on;
 }
-.mySwiper .contSwip .swip .head .block .text h1 {
-  font-weight: 700;
+header nav ul:nth-child(3) a {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 100%;
+  text-decoration: none;
+  color: #000;
+  text-transform: uppercase;
+  font-feature-settings: "pnum" on, "lnum" on;
+}
+
+.cont {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+main {
+  padding-top: 100px;
+  background-image: url(../icon/mainFon.png);
+  background-position: top right;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  font-family: "grec";
+}
+main .head .block {
+  position: relative;
+  width: 500px;
+}
+main .head .block img {
+  width: 100%;
+  margin-bottom: 41px;
+}
+main .head .block h3 {
+  font-weight: 400;
+  font-size: 40.7062px;
+  line-height: 100%;
+  color: #000000;
+  opacity: 0.6;
+  text-transform: uppercase;
+}
+main .head .block h1 {
+  font-weight: 400;
   font-size: 166.725px;
   line-height: 100%;
-  color: #202E66;
   text-transform: uppercase;
+  color: #1D3772;
 }
-.mySwiper .contSwip .swip .head .block:nth-child(2) {
-  align-items: center !important;
+main .head .block h2 {
+  font-weight: 400;
+  font-size: 65.1312px;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: #000000;
 }
-.mySwiper .contSwip .swip .head .block:nth-child(2) img {
+main .price {
+  margin-top: 150px;
+}
+main .price h2 {
+  font-weight: 400;
+  font-size: 100px;
+  line-height: 100%;
+  text-transform: uppercase;
+  text-align: right;
+  color: #FFFFFF;
+  margin-bottom: 30px;
+}
+main .price .gridBox {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 533px);
+  gap: 20px;
+}
+main .price .gridBox .elem {
+  transition: 0.3s;
+  position: relative;
+  cursor: pointer;
+  background-color: #721d1d;
+}
+main .price .gridBox .elem .bot {
+  position: absolute;
+  bottom: 0;
   width: 100%;
+  left: 0;
+  opacity: 0.4;
 }
-.mySwiper .contSwip .swip .price .box {
-  max-width: 1140px;
-  margin: 0 auto;
-  overflow-y: auto;
-  height: 100%;
-  padding: 20px;
+main .price .gridBox .elem:nth-child(1) {
+  grid-column: 1/3;
+  background: #1D3772;
 }
-.mySwiper .contSwip .swip .price .box h2 {
-  font-weight: 700;
-  font-size: 86.725px;
-  line-height: 50%;
-  text-align: center;
-  color: #202E66;
-  margin-bottom: 50px;
+main .price .gridBox .elem:nth-child(1) .text {
+  margin-top: 42px;
 }
-.mySwiper .contSwip .swip .price .box .swipCont {
-  width: 100%;
-  height: 100%;
-}
-.mySwiper .contSwip .swip .price .box .swipCont .mySwiper1 {
-  height: 100%;
-  width: 100%;
-}
-.mySwiper .contSwip .swip .price .box .swipCont .mySwiper1 .swipcont1 {
-  height: 100%;
-  width: 100%;
-  margin-bottom: 40px;
-}
-.mySwiper .contSwip .swip .price .box .swipCont .mySwiper1 .swipcont1 .swip1 {
-  padding: 0 50px;
-}
-.mySwiper .contSwip .swip .price .box .swipCont .mySwiper1 .swipcont1 .swip1 .swipbox {
+main .price .gridBox .elem:nth-child(2) {
   background-color: #25764E;
-  padding-bottom: 30px;
 }
-.mySwiper .contSwip .swip .price .box .swipCont .mySwiper1 .swipcont1 .swip1 .swipbox .img {
+main .price .gridBox .elem:nth-child(2) .img {
+  margin-bottom: 30px;
+}
+main .price .gridBox .elem:nth-child(3) {
+  background-color: #F07925;
+}
+main .price .gridBox .elem:nth-child(4) {
+  background-color: #F7A902;
+}
+main .price .gridBox .elem:nth-child(5) {
+  background-color: #532D87;
+}
+main .price .gridBox .elem .img {
   width: 100%;
 }
-.mySwiper .contSwip .swip .price .box .swipCont .mySwiper1 .swipcont1 .swip1 .swipbox .img img {
+main .price .gridBox .elem .img img {
   width: 100%;
 }
-.mySwiper .contSwip .swip .price .box .swipCont .mySwiper1 .swipcont1 .swip1 .swipbox .text {
-  color: #fff;
-  font-family: "Raleway";
-  margin-left: 10%;
+main .price .gridBox .elem .text {
+  color: #FFFFFF;
+  padding: 0 20px;
 }
-.mySwiper .contSwip .swip .price .box .swipCont .mySwiper1 .swipcont1 .swip1 .swipbox .text h3 {
-  font-weight: 700;
-  font-size: 60.4707px;
-  line-height: 60%;
+main .price .gridBox .elem .text h3 {
+  font-weight: 400;
+  font-size: 80.4707px;
+  line-height: 100%;
   text-transform: uppercase;
+  color: #FFFFFF;
 }
-.mySwiper .contSwip .swip .price .box .swipCont .mySwiper1 .swipcont1 .swip1 .swipbox .text h4 {
+main .price .gridBox .elem .text h4 {
   font-weight: 700;
   font-size: 31.4312px;
   line-height: 100%;
-  text-transform: lowercase;
+  font-family: "Raleway";
+  color: #FFFFFF;
   opacity: 0.6;
 }
-.mySwiper .contSwip .swip .price .box .swipCont .mySwiper1 .swipcont1 .swip1 .swipbox .text p {
+main .price .gridBox .elem .text p {
+  font-family: "Raleway";
   font-weight: 400;
-  font-size: 14.4312px;
+  font-size: 16px;
   line-height: 100%;
-  opacity: 0.6;
-  margin-top: 20px;
+  margin-top: 10px;
+  max-width: 312px;
 }
-.mySwiper .contSwip .swip .price .box .swipCont .mySwiper1 .castom {
+main .price .gridBox .elem:hover {
+  transform: scale(1.01);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+}
+main .product {
+  display: none;
+  margin-top: 200px;
+}
+main .product h2 {
+  font-weight: 400;
+  font-size: 100px;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+main .product .box {
+  width: 100%;
+  height: 100vh;
+}
+main .product .box .mySwiper {
+  width: 100%;
+  height: 100%;
+}
+main .product .box .mySwiper .swipCont {
+  width: 100%;
+  height: 100%;
+}
+main .product .box .mySwiper .swipCont .swip:nth-child(1) {
+  background-color: #000000;
+}
+main .product .box .mySwiper .swipCont .swip:nth-child(2) {
+  background-color: #1D3772;
+}
+main .product .box .mySwiper .swipCont .swip:nth-child(3) {
+  background-color: #532D87;
+}
+main .product .box .mySwiper .castm {
   display: flex;
-  position: relative !important;
   align-items: center;
-  justify-content: center;
-  margin: 10px 20px 20px;
+  justify-content: start;
+}
+main .product .box .mySwiper .castm .swiper-pagination-fraction {
+  width: 200px !important;
+  font-weight: 400;
+  font-size: 39.0625px;
+  line-height: 100%;
+  color: #fff;
+  font-family: "Raleway";
+}
+main .product .box .mySwiper .castm .swiper-pagination-fraction .swiper-pagination-current {
+  font-weight: 400;
+  font-size: 100px;
+  line-height: 100%;
+}
+main .enjoy h2 {
+  font-weight: 400;
+  font-size: 70px;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: #FFFFFF;
   margin-bottom: 20px;
 }
-.mySwiper .contSwip .swip .price .box .swipCont .mySwiper1 .castom .swiper-pagination {
-  transform: translateY(20%);
-}
-.mySwiper .contSwip .swip .content {
-  width: 100%;
-  height: 100%;
-}
-.mySwiper .contSwip .swip .content .box {
-  width: 25%;
-  margin: 0 auto;
-  height: 100%;
+main .enjoy .box {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
-  padding: 4%;
+  gap: 20px;
 }
-.mySwiper .contSwip .swip .content .box img {
+main .enjoy .box .blocks {
+  width: 450px;
+  padding: 30px 20px;
+  min-height: 608px;
+  position: relative;
+}
+main .enjoy .box .blocks:hover {
+  transform: scale(1.01);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+}
+main .enjoy .box .blocks:nth-child(1) {
+  background: #532D87;
+}
+main .enjoy .box .blocks:nth-child(2) {
+  background: #25764E;
+}
+main .enjoy .box .blocks:nth-child(3) {
+  background: #E3083B;
+}
+main .enjoy .box .blocks .img {
+  width: 100%;
+  margin-bottom: 10px;
+  text-align: center;
+}
+main .enjoy .box .blocks .img img {
+  max-width: 100%;
+  width: auto;
+}
+main .enjoy .box .blocks .text h4 {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin-bottom: 10px;
+}
+main .enjoy .box .blocks .text p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  opacity: 0.6;
+}
+main .enjoy .box .blocks .fons {
+  position: absolute;
+  width: 100%;
+  bottom: 20px;
+  left: 0;
+  opacity: 0.4;
+}
+main .animScrol .a {
   width: 100%;
 }
-.mySwiper .contSwip .swip .content .box .prew {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-150%);
-  font-weight: 900;
-  font-size: 200.414px;
+main .animScrol .container {
+  width: 100%;
+  overflow: hidden;
+}
+main .animScrol .box {
+  margin: 16px 0 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  animation: runScrol 8s linear infinite;
+}
+main .animScrol .box .img {
+  padding: 2px 5px;
+  background-color: #F7A902;
+}
+main .animScrol .box .text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 3px;
+}
+main .animScrol .comentbox {
+  width: 100%;
+  height: 52.66px;
+  background-color: #F7A902;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .animScrol .comentbox img {
+  width: 100%;
+}
+main .comment {
+  margin-top: 200px;
+}
+main .comment .box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+main .comment .box .block {
+  width: 50%;
+}
+main .comment .box .block p {
+  font-weight: 400;
+  font-size: 16px;
   line-height: 100%;
-  left: -45%;
+  color: #fff;
+  font-family: "Raleway";
+  margin-top: 20px;
+}
+main .comment .box .block img {
+  width: 100%;
+}
+main .comment .box .block h2 {
+  font-weight: 400;
+  font-size: 70px;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+main .prevue {
+  margin-top: 200px;
+  background-color: #1D3772;
+}
+main .prevue h2 {
+  font-weight: 400;
+  font-size: 70px;
+  line-height: 100%;
+  color: #fff;
+  margin-bottom: 20px;
+}
+main .prevue .box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+main .prevue .box .block {
+  width: 334.25px;
+  height: 646.05px;
+  position: relative;
+  padding-top: 20px;
+  padding: 20px;
+}
+main .prevue .box .block:hover {
+  transform: scale(1.01);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+}
+main .prevue .box .block:nth-child(1) {
+  background-color: #532D87;
+}
+main .prevue .box .block:nth-child(2) {
+  background: #25764E;
+}
+main .prevue .box .block:nth-child(3) {
+  background: #E3083B;
+}
+main .prevue .box .block:nth-child(4) {
+  background: #F07925;
+}
+main .prevue .box .block .img {
+  width: 100%;
+  text-align: center;
+}
+main .prevue .box .block .img img {
+  max-width: 100%;
+  width: auto;
+}
+main .prevue .box .block .text {
+  margin-top: 10px;
+}
+main .prevue .box .block .text h4 {
+  font-weight: 400;
+  font-size: 23px;
+  line-height: 100%;
   color: #fff;
 }
-.mySwiper .contSwip .swip .content .box .next {
-  position: absolute;
-  bottom: -25%;
-  transform: translateY(-150%);
-  font-weight: 900;
-  font-size: 200.414px;
-  line-height: 100%;
-  right: -35%;
+main .prevue .box .block .text p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
   color: #fff;
-  z-index: 11;
+  margin-top: 10px;
+  opacity: 0.6;
 }
-.mySwiper .contSwip .swip .content .box .sircl {
+main .prevue .box .block .fon {
   position: absolute;
-  animation: sircls 4s infinite linear;
+  bottom: 20px;
+  left: 0;
+  width: 100%;
+  opacity: 0.4;
 }
-.mySwiper .contSwip .swiper-slide-active {
-  opacity: 1 !important;
+main .contact {
+  padding-top: 160px;
+  background-color: #1D3772;
 }
-.mySwiper .contSwip .swiper-slide-active .swipcont1 .anim {
-  animation: animeleft 3s 1 ease;
+main .contact h2 {
+  font-weight: 400;
+  font-size: 70px;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin-bottom: 30px;
 }
-.mySwiper .contSwip .swiper-slide-active .swipcont1 .anim1 {
-  animation: animeright 3s 1 ease;
+main .contact .box {
+  display: flex;
+  gap: 20px;
+}
+main .contact .box .block:nth-child(1) {
+  width: 30%;
+}
+main .contact .box .block:nth-child(2) {
+  width: 25%;
+  background-color: #F7A902;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+main .contact .box .block:nth-child(2) .text {
+  padding: 30px 20px;
+}
+main .contact .box .block:nth-child(2) a {
+  font-weight: 400;
+  display: block;
+  font-size: 16px;
+  line-height: 100%;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  text-decoration: none;
+  margin-bottom: 21px;
+}
+main .contact .box .block:nth-child(2) p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  color: #fff;
+}
+main .contact .box .block:nth-child(2) img {
+  opacity: 0.3;
+  width: 100%;
+}
+main .contact .box .block:nth-child(3) {
+  width: 45%;
+}
+main .contact .box .block input {
+  width: 100%;
+  height: 56px;
+  border: 1px solid #D9D9D9;
+  padding: 20px;
+  color: #fff;
+  background-color: transparent;
+  margin-bottom: 20px;
+  display: block;
+}
+main .contact .box .block input::after {
+  content: "aaaa";
+  display: block;
+  position: absolute;
+  height: 40px;
+  width: 29px;
+  background-color: #25764E;
+  background-image: url(../icon/iconLaen.png);
+  background-position: center;
+  background-size: cover;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+main .contact .box .block button {
+  font-family: "grec";
+  width: 100%;
+  height: 56px;
+  background: #FFFFFF;
+  color: #1D3772;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  border: 0;
 }
 
+@keyframes runScrol {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
 @keyframes animeleft {
   0% {
     position: absolute;
