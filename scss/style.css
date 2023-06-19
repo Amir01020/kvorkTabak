@@ -318,8 +318,7 @@ main .animScrol .box {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  -webkit-animation: runScrol 8s linear infinite;
-          animation: runScrol 8s linear infinite;
+  animation: runScrol 8s linear infinite;
 }
 main .animScrol .box .img {
   padding: 2px 5px;
@@ -345,6 +344,7 @@ main .animScrol .comentbox img {
 }
 main .comment {
   margin-top: 200px;
+  background-color: #1D3772;
 }
 main .comment .box {
   display: flex;
@@ -374,7 +374,7 @@ main .comment .box .block h2 {
   color: #FFFFFF;
 }
 main .prevue {
-  margin-top: 200px;
+  padding-top: 200px;
   background-color: #1D3772;
 }
 main .prevue h2 {
@@ -471,7 +471,6 @@ main .contact .box .block:nth-child(1) {
 main .contact .box .block:nth-child(2) {
   width: 25%;
   background-color: #F7A902;
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
 }
@@ -535,15 +534,374 @@ main .contact .box .block button {
 
 footer {
   background-color: #1D3772;
+  padding: 20px;
+}
+footer .box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+footer .box .block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+footer .box .block:nth-child(3) p {
+  font-family: "Raleway";
+}
+footer .box .block p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #fff;
+  font-family: "grec";
 }
 
-@-webkit-keyframes runScrol {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
+.modal {
+  display: none;
+}
+
+.modalActiv {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 12;
+  display: block;
+}
+.modalActiv .mySwiper {
+  width: 100%;
+  height: 100%;
+}
+.modalActiv .mySwiper .swiper-wrapper {
+  width: 100%;
+  height: 100%;
+}
+.modalActiv .mySwiper .swiper-wrapper .swiper-slide {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.modalActiv .mySwiper .swiper-wrapper .swiper-slide .trava_1 {
+  position: absolute;
+  width: 35%;
+  top: -10%;
+  left: -5%;
+  z-index: 4;
+  transform: rotate(90deg);
+  filter: blur(5px);
+}
+.modalActiv .mySwiper .swiper-wrapper .swiper-slide .trava_2 {
+  position: absolute;
+  width: 30%;
+  bottom: -10%;
+  right: -10%;
+  transform: rotate(-90deg);
+  filter: blur(5px);
+}
+.modalActiv .mySwiper .swiper-wrapper .swiper-slide .ell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10%;
+}
+.modalActiv .mySwiper .swiper-wrapper .swiper-slide .box {
+  position: relative;
+  width: 20%;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.modalActiv .mySwiper .swiper-wrapper .swiper-slide .text {
+  max-width: 690px;
+  margin: 0 auto;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 130%;
+  text-align: center;
+  position: relative;
+  z-index: 5;
+  text-shadow: 0 0 10px #000;
+  color: #FFFFFF;
+  margin-top: 5%;
+  font-family: "grec";
+}
+.modalActiv .mySwiper .swiper-wrapper .swiper-slide .sirclssa {
+  animation: sircls 8s infinite linear;
+  width: 100%;
+  z-index: 2;
+  position: relative;
+  border-radius: 50%;
+}
+.modalActiv .mySwiper .swiper-wrapper .swiper-slide .thisIcon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 75%;
+  box-shadow: 0 0 10px #000;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+.modalActiv .mySwiper .swiper-wrapper .swiper-slide .textUpper {
+  position: absolute;
+  font-family: "Raleway";
+  color: #fff;
+  font-weight: 900;
+  font-size: 249.414px;
+  line-height: 50%;
+  top: 0;
+  left: -75%;
+  z-index: 1;
+}
+.modalActiv .mySwiper .swiper-wrapper .swiper-slide .textLover {
+  position: absolute;
+  font-family: "Raleway";
+  color: #fff;
+  font-weight: 900;
+  font-size: 249.414px;
+  line-height: 50%;
+  bottom: 10%;
+  right: -75%;
+  z-index: 3;
+}
+.modalActiv .mySwiper .swiper-wrapper .swiper-slide .trava1 {
+  position: absolute;
+  width: 100%;
+  top: -40%;
+  right: -40%;
+}
+.modalActiv .mySwiper .swiper-wrapper .swiper-slide .trava2 {
+  position: absolute;
+  width: 100%;
+  bottom: -40%;
+  left: -40%;
+  transform: rotate(180deg);
+}
+.modalActiv .mySwiper .swiper-wrapper .swiper-slide:nth-child(2) .textUpper {
+  position: absolute;
+  font-family: "Raleway";
+  color: #fff;
+  font-weight: 900;
+  font-size: 249.414px;
+  line-height: 50%;
+  top: 0;
+  left: -150%;
+  z-index: 1;
+}
+.modalActiv .mySwiper .swiper-wrapper .swiper-slide:nth-child(2) .textLover {
+  position: absolute;
+  font-family: "Raleway";
+  color: #fff;
+  font-weight: 900;
+  font-size: 249.414px;
+  line-height: 50%;
+  bottom: 10%;
+  right: -75%;
+  z-index: 3;
+  transform: translate(30%, 30%);
+}
+.modalActiv .mySwiper .swiper-wrapper .swiper-slide:nth-child(2) .trava1 {
+  position: absolute;
+  width: 150%;
+  top: -50%;
+  right: -50%;
+}
+.modalActiv .mySwiper .swiper-wrapper .swiper-slide:nth-child(2) .trava2 {
+  position: absolute;
+  width: 150%;
+  bottom: -50%;
+  left: -50%;
+  transform: rotate(180deg);
+}
+.modalActiv .mySwiper .swiper-wrapper .swiper-slide:nth-child(2) .trava_1 {
+  position: absolute;
+  width: 50%;
+  top: -40%;
+  left: -25%;
+  z-index: 4;
+  transform: rotate(90deg);
+  filter: blur(5px);
+}
+.modalActiv .mySwiper .swiper-wrapper .swiper-slide:nth-child(2) .trava_2 {
+  position: absolute;
+  width: 50%;
+  bottom: -50%;
+  right: -20%;
+  transform: rotate(-90deg);
+  filter: blur(5px);
+}
+.modalActiv .mySwiper .swiper-wrapper .swiper-slide:nth-child(3) .textUpper {
+  position: absolute;
+  font-family: "Raleway";
+  color: #fff;
+  font-weight: 900;
+  font-size: 149.414px;
+  line-height: 50%;
+  top: 0;
+  left: -100%;
+  z-index: 1;
+}
+.modalActiv .mySwiper .swiper-wrapper .swiper-slide:nth-child(3) .textLover {
+  position: absolute;
+  font-family: "Raleway";
+  color: #fff;
+  font-weight: 900;
+  font-size: 149.414px;
+  line-height: 50%;
+  bottom: 10%;
+  right: -75%;
+  z-index: 3;
+  transform: translate(30%, 30%);
+}
+.modalActiv .mySwiper .swiper-wrapper .swiper-slide:nth-child(3) .trava1 {
+  position: absolute;
+  width: 200%;
+  top: -70%;
+  right: -70%;
+}
+.modalActiv .mySwiper .swiper-wrapper .swiper-slide:nth-child(3) .trava2 {
+  position: absolute;
+  width: 200%;
+  bottom: -70%;
+  left: -70%;
+  transform: rotate(180deg);
+}
+.modalActiv .mySwiper .swiper-wrapper .swiper-slide:nth-child(3) .trava_1 {
+  position: absolute;
+  width: 60%;
+  top: -40%;
+  left: -25%;
+  z-index: 4;
+  transform: rotate(90deg);
+  filter: blur(5px);
+}
+.modalActiv .mySwiper .swiper-wrapper .swiper-slide:nth-child(3) .trava_2 {
+  position: absolute;
+  width: 60%;
+  bottom: -50%;
+  right: -20%;
+  transform: rotate(-90deg);
+  filter: blur(5px);
+}
+.modalActiv .mySwiper .swiper-wrapper .swiper-slide:nth-child(4) .textUpper {
+  position: absolute;
+  font-family: "Raleway";
+  color: #fff;
+  font-weight: 900;
+  font-size: 149.414px;
+  line-height: 50%;
+  top: 0;
+  left: -100%;
+  z-index: 1;
+}
+.modalActiv .mySwiper .swiper-wrapper .swiper-slide:nth-child(4) .textLover {
+  position: absolute;
+  font-family: "Raleway";
+  color: #fff;
+  font-weight: 900;
+  font-size: 149.414px;
+  line-height: 50%;
+  bottom: 10%;
+  right: -75%;
+  z-index: 3;
+  transform: translate(30%, 30%);
+}
+.modalActiv .mySwiper .swiper-wrapper .swiper-slide:nth-child(4) .trava1 {
+  position: absolute;
+  width: 100%;
+  top: -50%;
+  right: -50%;
+}
+.modalActiv .mySwiper .swiper-wrapper .swiper-slide:nth-child(4) .trava2 {
+  position: absolute;
+  width: 100%;
+  bottom: -50%;
+  left: -50%;
+  transform: rotate(180deg);
+}
+.modalActiv .mySwiper .swiper-wrapper .swiper-slide:nth-child(4) .trava_1 {
+  position: absolute;
+  width: 60%;
+  top: -40%;
+  left: -25%;
+  z-index: 4;
+  transform: rotate(90deg);
+  filter: blur(5px);
+}
+.modalActiv .mySwiper .swiper-wrapper .swiper-slide:nth-child(4) .trava_2 {
+  position: absolute;
+  width: 60%;
+  bottom: -50%;
+  right: -20%;
+  transform: rotate(-90deg);
+  filter: blur(5px);
+}
+.modalActiv .mySwiper .swiper-wrapper .swiper-slide:nth-child(5) .textUpper {
+  position: absolute;
+  font-family: "Raleway";
+  color: #fff;
+  font-weight: 900;
+  font-size: 249.414px;
+  line-height: 50%;
+  top: 0;
+  left: -150%;
+  z-index: 1;
+}
+.modalActiv .mySwiper .swiper-wrapper .swiper-slide:nth-child(5) .textLover {
+  position: absolute;
+  font-family: "Raleway";
+  color: #fff;
+  font-weight: 900;
+  font-size: 149.414px;
+  line-height: 50%;
+  bottom: 10%;
+  right: -75%;
+  z-index: 3;
+  transform: translate(30%, 30%);
+}
+.modalActiv .mySwiper .swiper-wrapper .swiper-slide:nth-child(5) .trava1 {
+  position: absolute;
+  width: 120%;
+  top: -50%;
+  right: -50%;
+}
+.modalActiv .mySwiper .swiper-wrapper .swiper-slide:nth-child(5) .trava2 {
+  position: absolute;
+  width: 120%;
+  bottom: -50%;
+  left: -50%;
+  transform: rotate(180deg);
+}
+.modalActiv .mySwiper .swiper-wrapper .swiper-slide:nth-child(5) .trava_1 {
+  position: absolute;
+  width: 60%;
+  top: -40%;
+  left: -25%;
+  z-index: 4;
+  transform: rotate(90deg);
+  filter: blur(5px);
+}
+.modalActiv .mySwiper .swiper-wrapper .swiper-slide:nth-child(5) .trava_2 {
+  position: absolute;
+  width: 60%;
+  bottom: -50%;
+  right: -20%;
+  transform: rotate(-90deg);
+  filter: blur(5px);
+}
+.modalActiv .mySwiper .swiper-pagination {
+  width: 150px;
+  height: 90px;
+  margin-bottom: 20px;
+  color: #fff;
+  font-weight: 400;
+  font-size: 39.0625px;
+  line-height: 100%;
+}
+.modalActiv .mySwiper .swiper-pagination .swiper-pagination-current {
+  font-weight: 400;
+  font-size: 100px;
+  line-height: 100%;
 }
 
 @keyframes runScrol {
@@ -552,18 +910,6 @@ footer {
   }
   100% {
     transform: translateX(-100%);
-  }
-}
-@-webkit-keyframes animeleft {
-  0% {
-    position: absolute;
-    left: -100%;
-    opacity: 0;
-  }
-  100% {
-    position: relative;
-    left: 0%;
-    opacity: 1;
   }
 }
 @keyframes animeleft {
@@ -578,18 +924,6 @@ footer {
     opacity: 1;
   }
 }
-@-webkit-keyframes animeright {
-  0% {
-    position: absolute;
-    right: -100%;
-    opacity: 0;
-  }
-  100% {
-    position: relative;
-    right: 0%;
-    opacity: 1;
-  }
-}
 @keyframes animeright {
   0% {
     position: absolute;
@@ -600,14 +934,6 @@ footer {
     position: relative;
     right: 0%;
     opacity: 1;
-  }
-}
-@-webkit-keyframes sircls {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
   }
 }
 @keyframes sircls {
