@@ -692,6 +692,14 @@ footer {
   height: 100%;
   position: fixed;
   // background-color: #25764E;
+
+  .clous{
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    z-index: 12;
+    cursor: pointer;
+  }
   z-index: 12;
   display: block;
   .mySwiper {
@@ -1097,6 +1105,7 @@ footer {
     left: 0%;
     opacity: 1;
   }
+
 }
 
 @keyframes animeright {
@@ -1121,4 +1130,9 @@ footer {
   100% {
     transform: rotate(360deg);
   }
+}
+
+
+@media(max-width:1140px){
+    
 }

@@ -14,6 +14,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Lora:wght@400;500;600;700&family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
         rel="stylesheet">
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/close.css' rel='stylesheet'>
     <link rel="stylesheet" href="./scss/style.css">
     <link rel="icon" href="./icon/logos.svg">
 </head>
@@ -38,10 +39,12 @@
         </nav>
     </header>
     <div class="modal" id="modalBlock">
-
+        <div class="clous" id="clous">
+            <i class="gg-close" style="color: #fff;"></i>
+        </div>
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">
-                <div class="swiper-slide" style="background-color:#25764E ;">
+                <div class="swiper-slide prodSliyd" style="background-color:#25764E ;" data-id="1">
                     <img src="./icon/trava1.png" alt="" class="trava_1">
                     <img src="./icon/trava1.png" alt="" class="trava_2">
                     <div class="ell">
@@ -49,7 +52,7 @@
                             <div class="block">
                                 <img src="./icon/sircl.png" class="sirclssa" alt="">
                                 <img src="./icon/product1.png" class="thisIcon" alt="">
-                                <p class="textUpper">мя</p>
+                                <p class="textUpper" >мя</p>
                                 <p class="textLover">та</p>
                                 <img src="./icon/trava1.png" alt="" class="trava1">
                                 <img src="./icon/trava1.png" alt="" class="trava2">
@@ -63,7 +66,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="swiper-slide" style="background-color:#F7A902 ;">
+                <div class="swiper-slide prodSliyd" style="background-color:#F7A902 ;" data-id="3">
                     <img src="./icon/mango.png" alt="" class="trava_1">
                     <img src="./icon/mango.png" alt="" class="trava_2">
                     <div class="ell">
@@ -89,7 +92,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="swiper-slide" style="background-color:#532D87 ;">
+                <div class="swiper-slide prodSliyd" style="background-color:#532D87 ;" data-id="4">
                     <img src="./icon/trava3.png" alt="" class="trava_1">
                     <img src="./icon/trava3.png" alt="" class="trava_2">
                     <div class="ell">
@@ -114,7 +117,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="swiper-slide" style="background-color:#E3083B ;">
+                <div class="swiper-slide prodSliyd" style="background-color:#E3083B ;" data-id="5">
                     <img src="./icon/tovar4.png" alt="" class="trava_1">
                     <img src="./icon/tovar4.png" alt="" class="trava_2">
                     <div class="ell">
@@ -139,7 +142,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="swiper-slide" style="background-color:#F07925 ;">
+                <div class="swiper-slide prodSliyd" style="background-color:#F07925 ;" data-id="2">
                     <img src="./icon/tovar5.png" alt="" class="trava_1">
                     <img src="./icon/tovar5.png" alt="" class="trava_2">
                     <div class="ell">
@@ -148,8 +151,8 @@
                                 <img src="./icon/sircl.png" class="sirclssa" alt="">
                                 <img src="./icon/product5.png" class="thisIcon" alt="">
                                 <p class="textUpper">Пер</p>
-                                <p class="textLover"><img src="./icon/textPers.png" style="max-width: 100%; width: auto;"
-                                        class="p" alt=""></p>
+                                <p class="textLover"><img src="./icon/textPers.png"
+                                        style="max-width: 100%; width: auto;" class="p" alt=""></p>
                                 <img src="./icon/tovar5.png" alt="" class="trava1">
                                 <img src="./icon/tovar5.png" alt="" class="trava2">
                             </div>
@@ -192,7 +195,7 @@
             <div class="cont">
                 <h2>продукты</h2>
                 <div class="gridBox">
-                    <div class="elem" id="oupanPrice">
+                    <div class="elem" id="oupanPrice" data-id="0">
                         <div class="img">
                             <img src="./icon/priceFon.png" alt="">
                         </div>
@@ -205,7 +208,7 @@
                         </div>
                         <img src="./icon/Layer_1.png" alt="" class="bot">
                     </div>
-                    <div class="elem" id="oupanPrice">
+                    <div class="elem" id="oupanPrice" data-id="0">
                         <div class="img">
                             <img src="./icon/priceTabac.png" alt="">
                         </div>
@@ -216,7 +219,7 @@
                         </div>
                         <img src="./icon/Layer_2.png" alt="" class="bot">
                     </div>
-                    <div class="elem" id="oupanPrice">
+                    <div class="elem" id="oupanPrice" data-id="4">
                         <div class="img">
                             <img src="./icon/priceTabac.png" alt="">
                         </div>
@@ -227,7 +230,7 @@
                         </div>
                         <img src="./icon/Layer_3.png" alt="" class="bot">
                     </div>
-                    <div class="elem" id="oupanPrice">
+                    <div class="elem" id="oupanPrice" data-id="1">
                         <div class="img">
                             <img src="./icon/priceTabac.png" alt="">
                         </div>
@@ -238,7 +241,7 @@
                         </div>
                         <img src="./icon/Layer_4.png" alt="" class="bot">
                     </div>
-                    <div class="elem" id="oupanPrice">
+                    <div class="elem" id="oupanPrice" data-id="2">
                         <div class="img">
                             <img src="./icon/priceTabac.png" alt="">
                         </div>
@@ -249,7 +252,7 @@
                         </div>
                         <img src="./icon/Layer_5.png" alt="" class="bot">
                     </div>
-                    <div class="elem" id="oupanPrice">
+                    <div class="elem" id="oupanPrice" data-id="3">
                         <div class="img">
                             <img src="./icon/priceTabac.png" alt="">
                         </div>

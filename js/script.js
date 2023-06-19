@@ -5,14 +5,19 @@ let d = document
 
 let oupanPrice = d.querySelectorAll('#oupanPrice')
     , modalBlock = d.querySelector('#modalBlock')
-oupanPrice.forEach((i, item) => {
+    ,prodSliyd = d.querySelectorAll('.prodSliyd')
+oupanPrice.forEach((i) => {
     i.onclick = () => {
-        modalBlock.classList.toggle('modalActiv')
+        modalBlock.classList.add('modalActiv')
+
+        
+
         let swiper = new Swiper(".mySwiper", {
             direction: "vertical",
             slidesPerView: 1,
             spaceBetween: 30,
             effect: "fade",
+            initialSlide: i.dataset.id,
             mousewheel: true,
 
             pagination: {
@@ -22,3 +27,11 @@ oupanPrice.forEach((i, item) => {
         });
     }
 })
+let clous = d.querySelector('#clous')
+
+clous.onclick=()=>{
+    modalBlock.classList.remove('modalActiv')
+}
+
+
+
