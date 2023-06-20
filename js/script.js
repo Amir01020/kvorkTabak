@@ -1,21 +1,21 @@
 let swipers = new Swiper(".mySwiper1", {
     spaceBetween: 30,
     pagination: {
-      el: ".swiper-pagination",
+        el: ".swiper-pagination",
     },
-  });
+});
 
 
 let d = document
 
 let oupanPrice = d.querySelectorAll('#oupanPrice')
     , modalBlock = d.querySelector('#modalBlock')
-    ,prodSliyd = d.querySelectorAll('.prodSliyd')
+    , prodSliyd = d.querySelectorAll('.prodSliyd')
 oupanPrice.forEach((i) => {
     i.onclick = () => {
         modalBlock.classList.add('modalActiv')
 
-        
+
 
         let swiper = new Swiper(".mySwiper", {
             direction: "vertical",
@@ -34,11 +34,19 @@ oupanPrice.forEach((i) => {
 })
 let clous = d.querySelector('#clous')
 
-clous.onclick=()=>{
+clous.onclick = () => {
     modalBlock.classList.remove('modalActiv')
 }
 let modalUp = d.querySelector('.modalUp')
 let btnNext = d.querySelector('#btnNext')
-btnNext.onclick=()=>{
+btnNext.onclick = () => {
     modalUp.style.display = 'none'
+}
+
+
+let clouse = d.querySelector('#clouse'),
+    burgerMenu = d.querySelector('.burgerMenu')
+clouse.onclick = () => {
+    burgerMenu.classList.toggle('burgerMenuActive')
+    clouse.classList.toggle('div1')
 }

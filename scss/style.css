@@ -22,7 +22,7 @@ header {
   background: linear-gradient(0deg, rgba(196, 196, 196, 0.137) 23%, rgb(255, 255, 255) 100%);
   -webkit-backdrop-filter: blur(40px);
   backdrop-filter: blur(40px);
-  z-index: 0;
+  z-index: 11;
 }
 header nav {
   max-width: 1440px;
@@ -49,6 +49,65 @@ header nav ul:nth-child(2) a {
   color: #000;
   text-transform: uppercase;
   font-feature-settings: "pnum" on, "lnum" on;
+}
+header nav ul:nth-child(2) .div {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  position: relative;
+}
+header nav ul:nth-child(2) .div div:nth-child(1) {
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #000;
+}
+header nav ul:nth-child(2) .div div:nth-child(2) {
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  background-color: #000;
+}
+header nav ul:nth-child(2) .div div:nth-child(3) {
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+}
+header nav ul:nth-child(2) .div1 div:nth-child(1) {
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(-55deg);
+  background-color: #fff;
+}
+header nav ul:nth-child(2) .div1 div:nth-child(2) {
+  width: 70%;
+  height: 2px;
+  position: absolute;
+  border-radius: 2px;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  background-color: #fff;
+}
+header nav ul:nth-child(2) .div1 div:nth-child(3) {
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: rotate(-55deg);
+  background-color: #fff;
 }
 header nav ul:nth-child(3) a {
   font-weight: 300;
@@ -461,8 +520,7 @@ main .animScrol .box {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  -webkit-animation: runScrol 8s linear infinite;
-          animation: runScrol 8s linear infinite;
+  animation: runScrol 8s linear infinite;
 }
 main .animScrol .box .img {
   padding: 2px 5px;
@@ -508,7 +566,7 @@ main .comment .box .block p {
   margin-top: 20px;
 }
 main .comment .box .block img {
-  width: 100%;
+  height: 100%;
 }
 main .comment .box .block h2 {
   font-weight: 400;
@@ -624,7 +682,6 @@ main .contact .box .block:nth-child(1) form {
 main .contact .box .block:nth-child(2) {
   width: 25%;
   background-color: #f7a902;
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
 }
@@ -713,6 +770,43 @@ footer .box .block p {
   font-family: "grec";
 }
 
+.burgerMenu {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #1D3772;
+  z-index: 10;
+}
+.burgerMenu .box {
+  width: 100%;
+  padding: 0 20px;
+}
+.burgerMenu .box a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Raleway";
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 100%;
+  width: 100%;
+  padding: 15px 0;
+  border: 2px solid #fff;
+  text-decoration: none;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.burgerMenuActive {
+  display: flex;
+}
+
 .modal {
   display: none;
 }
@@ -745,7 +839,6 @@ footer .box .block p {
   z-index: 1;
 }
 .modalUp .box {
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   color: #fff;
@@ -844,7 +937,6 @@ footer .box .block p {
 .modalActiv .mySwiper .swiper-wrapper .swiper-slide .box {
   position: relative;
   width: 20%;
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
 }
@@ -863,8 +955,7 @@ footer .box .block p {
   font-family: "grec";
 }
 .modalActiv .mySwiper .swiper-wrapper .swiper-slide .sirclssa {
-  -webkit-animation: sircls 8s infinite linear;
-          animation: sircls 8s infinite linear;
+  animation: sircls 8s infinite linear;
   width: 100%;
   z-index: 2;
   position: relative;
@@ -1142,33 +1233,12 @@ footer .box .block p {
   line-height: 100%;
 }
 
-@-webkit-keyframes runScrol {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-
 @keyframes runScrol {
   0% {
     transform: translateX(100%);
   }
   100% {
     transform: translateX(-100%);
-  }
-}
-@-webkit-keyframes animeleft {
-  0% {
-    position: absolute;
-    left: -100%;
-    opacity: 0;
-  }
-  100% {
-    position: relative;
-    left: 0%;
-    opacity: 1;
   }
 }
 @keyframes animeleft {
@@ -1183,18 +1253,6 @@ footer .box .block p {
     opacity: 1;
   }
 }
-@-webkit-keyframes animeright {
-  0% {
-    position: absolute;
-    right: -100%;
-    opacity: 0;
-  }
-  100% {
-    position: relative;
-    right: 0%;
-    opacity: 1;
-  }
-}
 @keyframes animeright {
   0% {
     position: absolute;
@@ -1205,14 +1263,6 @@ footer .box .block p {
     position: relative;
     right: 0%;
     opacity: 1;
-  }
-}
-@-webkit-keyframes sircls {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
   }
 }
 @keyframes sircls {
@@ -1255,12 +1305,6 @@ footer .box .block p {
     width: 40px;
     display: block;
   }
-  header {
-    -webkit-backdrop-filter: blur(0px);
-    backdrop-filter: blur(0px);
-    background: transparent;
-    position: relative;
-  }
   main .comment .box .block {
     width: 100%;
   }
@@ -1298,6 +1342,10 @@ footer .box .block p {
   }
   .v h2 {
     margin-bottom: 5px;
+  }
+  main .comment .box .block img {
+    width: 100%;
+    height: auto;
   }
 }
 @media (max-width: 880px) {

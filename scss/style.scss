@@ -29,12 +29,13 @@ header {
   background: linear-gradient(0deg, rgba(196, 196, 196, 0.137) 23%, rgba(255, 255, 255, 1) 100%);
   -webkit-backdrop-filter: blur(40px);
   backdrop-filter: blur(40px);
-  z-index: 0;
+  z-index: 11;
 
   nav {
     max-width: 1440px;
     margin: 0 auto;
     @include flex(center, space-between);
+
     padding: 6px 20px;
 
     &:nth-child(2) {
@@ -56,6 +57,73 @@ header {
           color: #000;
           text-transform: uppercase;
           font-feature-settings: "pnum" on, "lnum" on;
+        }
+        .div{
+          width: 20px;
+          height: 20px;
+          cursor: pointer;
+          
+          position: relative;
+          div{
+            &:nth-child(1){
+              width: 100%;
+              height: 2px;
+              position: absolute;
+              top: 0;
+              left: 0;
+              background-color: #000;
+            }
+            &:nth-child(2){
+              width: 100%;
+              height: 2px;
+              position: absolute;
+              top: 50%;
+              left: 0;
+              transform: translateY(-50%);
+              background-color: #000;
+            }
+            &:nth-child(3){
+              width: 100%;
+              height: 2px;
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              background-color: #000;
+            }
+          }
+        }
+        .div1{
+          
+          div{
+            &:nth-child(1){
+              width: 100%;
+              height: 2px;
+              position: absolute;
+              top: 0;
+              left: 0;
+              transform: rotate(-55deg);
+              background-color: #fff;
+            }
+            &:nth-child(2){
+              width: 70%;
+              height: 2px;
+              position: absolute;
+              border-radius: 2px;
+              top: 50%;
+              left: 50%;
+              transform: translateY(-50%) translateX(-50%);
+              background-color: #fff;
+            }
+            &:nth-child(3){
+              width: 100%;
+              height: 2px;
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              transform: rotate(-55deg);
+              background-color: #fff;
+            }
+          }
         }
       }
 
@@ -91,6 +159,7 @@ main {
 
   .head {
     height: 100vh;
+
     .block {
       position: relative;
       width: 500px;
@@ -151,6 +220,7 @@ main {
         position: relative;
         cursor: pointer;
         transition: all 1s !important;
+
         .text {
           color: #ffffff;
           padding: 0 20px;
@@ -264,6 +334,7 @@ main {
 
   .swipss {
     display: none;
+
     h2 {
       font-weight: 400;
       font-size: 50px;
@@ -482,6 +553,7 @@ main {
         min-height: 608px;
         position: relative;
         transition: all 1s !important;
+
         &:hover {
           transform: scale(1.05);
           box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
@@ -603,7 +675,7 @@ main {
         }
 
         img {
-          width: 100%;
+          height: 100%;
         }
 
         h2 {
@@ -641,6 +713,7 @@ main {
         padding-top: 20px;
         padding: 20px;
         transition: all 1s !important;
+
         &:hover {
           transform: scale(1.05);
           box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
@@ -720,6 +793,7 @@ main {
       display: flex;
       gap: 20px;
       min-height: 333px;
+
       .block {
         &:nth-child(1) {
           width: 30%;
@@ -727,8 +801,9 @@ main {
           display: flex;
           flex-direction: column;
           justify-content: space-between;
+
           form {
-            height: 333px ;
+            height: 333px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -841,6 +916,42 @@ footer {
   }
 }
 
+.burgerMenu {
+  width: 100%;
+  height: 100%;
+  @include flex(center, center);
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #1D3772;
+  z-index: 10;
+
+  .box {
+    width: 100%;
+    padding: 0 20px;
+
+    a {
+      @include flex(center, center);
+      font-family: 'Raleway';
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 100%;
+      width: 100%;
+      padding: 15px 0;
+      border: 2px solid #fff;
+      text-decoration: none;
+      color: #fff;
+      margin-bottom: 20px;
+
+
+    }
+  }
+
+}
+.burgerMenuActive{
+  display: flex;
+}
 .modal {
   display: none;
 }
@@ -1053,7 +1164,7 @@ footer {
           transform: rotate(180deg);
         }
 
-        
+
 
         &:nth-child(2) {
           .textUpper {
@@ -1409,12 +1520,7 @@ footer {
     display: block;
   }
 
-  header {
-    -webkit-backdrop-filter: blur(0px);
-    backdrop-filter: blur(0px);
-    background: transparent;
-    position: relative;
-  }
+ 
 
   main .comment .box .block {
     width: 100%;
@@ -1464,6 +1570,10 @@ footer {
       margin-bottom: 5px;
     }
   }
+  main .comment .box .block img{
+    width: 100%;
+    height: auto;
+  }
 }
 
 @media (max-width: 880px) {
@@ -1510,8 +1620,9 @@ footer {
     margin: 0;
     padding-top: 100px;
   }
-  main .contact .box .block:nth-child(3){
-    iframe{
+
+  main .contact .box .block:nth-child(3) {
+    iframe {
       height: 333px;
     }
   }
@@ -1530,6 +1641,7 @@ footer {
   .modalActiv .mySwiper .swiper-wrapper .swiper-slide .text {
     font-size: 16px;
   }
+
   .price {
     display: none !important;
   }
