@@ -482,6 +482,19 @@ main {
           }
         }
       }
+      
+      .swiper-pagination-bullet {
+        border-radius: 0;
+        width: 20px;
+        height: 20px;
+        border: 2px solid #2e59be;
+        background-color: transparent;
+        opacity: 1;
+        
+      }
+      .swiper-pagination-bullet-active{
+        background-color: #2e59be;
+      }
     }
   }
 

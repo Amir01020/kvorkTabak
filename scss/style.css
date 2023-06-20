@@ -396,6 +396,17 @@ main .swipss .mySwiper1 .swiper-wrapper .swiper-slide .elem:hover {
   transform: scale(1.01);
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
 }
+main .swipss .mySwiper1 .swiper-pagination-bullet {
+  border-radius: 0;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #2e59be;
+  background-color: transparent;
+  opacity: 1;
+}
+main .swipss .mySwiper1 .swiper-pagination-bullet-active {
+  background-color: #2e59be;
+}
 main .product {
   display: none;
   margin-top: 200px;
