@@ -15,6 +15,7 @@
         href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Lora:wght@400;500;600;700&family=Manrope:wght@200;300;400;500;600;700;800&display=swap"
         rel="stylesheet">
     <link href='https://unpkg.com/css.gg@2.0.0/icons/css/close.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/menu-right-alt.css' rel='stylesheet'>
     <link rel="stylesheet" href="./scss/style.css">
     <link rel="icon" href="./icon/logos.svg">
 </head>
@@ -37,6 +38,14 @@
                 <li><a href="tel:79522823823">+7 (952) 282-38-23</a></li>
             </ul>
         </nav>
+        <nav>
+            <ul>
+                <li><a href="#"><img src="./icon/logos.svg" alt=""></a></li>
+            </ul>
+            <ul>
+                <li><a href="#"><i class="gg-menu-right-alt"></i></a></li>
+            </ul>
+        </nav>
     </header>
     <div class="modal" id="modalBlock">
         <div class="clous" id="clous">
@@ -52,7 +61,7 @@
                             <div class="block">
                                 <img src="./icon/sircl.png" class="sirclssa" alt="">
                                 <img src="./icon/product1.png" class="thisIcon" alt="">
-                                <p class="textUpper" >мя</p>
+                                <p class="textUpper">мя</p>
                                 <p class="textLover">та</p>
                                 <img src="./icon/trava1.png" alt="" class="trava1">
                                 <img src="./icon/trava1.png" alt="" class="trava2">
@@ -60,6 +69,7 @@
                         </div>
                     </div>
                     <div class="text">
+                        <h3 style="display: none;">мята</h3>
                         <p>
                             Вкус мяты сливается в гармонии терпкости и сладости, позволяет погрузиться в искушающий мир
                             богов и ощутить волшебство непревзойденного наслаждения...
@@ -83,6 +93,7 @@
                         </div>
                     </div>
                     <div class="text">
+                        <h3 style="display: none;">манго</h3>
                         <p>
                             Табак жевательный, соприкасающийся с аурой манго, связывает вкус и атмосферу Родоса.
                             Сладость и сочность манго, сопровождаемые нежными тропическими нотками, переносят на
@@ -108,6 +119,7 @@
                         </div>
                     </div>
                     <div class="text">
+                        <h3 style="display: none;">Виноград</h3>
                         <p>
                             Табак жевательный, обвитый атмосферой винограда, олицетворяет изысканность и интеллект Афин.
                             Его сладкий и освежающий вкус, сопровождаемый легкой кислинкой винограда, приносит ощущение
@@ -134,6 +146,7 @@
                         </div>
                     </div>
                     <div class="text">
+                        <h3 style="display: none;">Барбарис</h3>
                         <p>
                             Табак жевательный, со вкусом барбариса, олицетворяет силу и дисциплину Спарты. Игра пряности
                             барбариса смешивается с бодрящей энергией спартанского духа, создавая неповторимую симфонию
@@ -159,6 +172,7 @@
                         </div>
                     </div>
                     <div class="text">
+                        <h3 style="display: none;">Персик</h3>
                         <p>
                             Табак жевательный, со вкусом барбариса, олицетворяет силу и дисциплину Спарты. Игра пряности
                             барбариса смешивается с бодрящей энергией спартанского духа, создавая неповторимую симфонию
@@ -175,11 +189,23 @@
 
 
     </div>
+    <div class="modalUp">
+        <div class="box" data-aos="zoom-in">
+            <h2>Тебе больше 18, воин?!</h2>
+            <p>Законодательство РФ запрещает демонстрацию и продажу табачных изделий несовершеннолетним лицам.
+                Нажимая кнопку "ДА", Вы подтверждаете, что вам исполнилось 18 или более лет и соглашаетесь просматривать
+                визуальные материалы на сайте.</p>
+            <div class="btnBox">
+                <a href="https://www.google.co.uz/?hl=ru"><button>НЕт</button></a>
+                <button id="btnNext">да</button>
+            </div>
+        </div>
+    </div>
     <main>
         <section class="head">
             <div class="cont">
                 <div class="box">
-                    <div class="block">
+                    <div class="block" >
                         <img src="./icon/logohead.png" alt="">
 
                     </div>
@@ -193,9 +219,9 @@
         </section>
         <section class="price" id="price">
             <div class="cont">
-                <h2>продукты</h2>
+                <h2 data-aos="zoom-out-left">продукты</h2>
                 <div class="gridBox">
-                    <div class="elem" id="oupanPrice" data-id="0">
+                    <div class="elem" id="oupanPrice" data-aos="zoom-out-down" data-id="0">
                         <div class="img">
                             <img src="./icon/priceFon.png" alt="">
                         </div>
@@ -205,10 +231,14 @@
                             <p>
                                 Ароматная мята вмиг освежит и настроит тебя на позитивный лад
                             </p>
+                            <div class="btnBox">
+                                <button>13гр</button>
+                                <button>20гр</button>
+                            </div>
                         </div>
                         <img src="./icon/Layer_1.png" alt="" class="bot">
                     </div>
-                    <div class="elem" id="oupanPrice" data-id="0">
+                    <div class="elem" id="oupanPrice" data-aos="zoom-out-down" data-id="0">
                         <div class="img">
                             <img src="./icon/priceTabac.png" alt="">
                         </div>
@@ -216,10 +246,14 @@
                             <h3>Legend</h3>
                             <h4>Мята </h4>
                             <p>Ароматная мята вмиг освежит и настроит тебя на позитивный лад</p>
+                            <div class="btnBox">
+                                <button>13гр</button>
+                                <button>20гр</button>
+                            </div>
                         </div>
                         <img src="./icon/Layer_2.png" alt="" class="bot">
                     </div>
-                    <div class="elem" id="oupanPrice" data-id="4">
+                    <div class="elem" id="oupanPrice" data-aos="zoom-out-down" data-id="4">
                         <div class="img">
                             <img src="./icon/priceTabac.png" alt="">
                         </div>
@@ -227,10 +261,14 @@
                             <h3>Legend</h3>
                             <h4>Персик</h4>
                             <p>Ароматная мята вмиг освежит и настроит тебя на позитивный лад</p>
+                            <div class="btnBox">
+                                <button>13гр</button>
+                                <button>20гр</button>
+                            </div>
                         </div>
                         <img src="./icon/Layer_3.png" alt="" class="bot">
                     </div>
-                    <div class="elem" id="oupanPrice" data-id="1">
+                    <div class="elem" id="oupanPrice" data-aos="zoom-out-down" data-id="1">
                         <div class="img">
                             <img src="./icon/priceTabac.png" alt="">
                         </div>
@@ -238,10 +276,14 @@
                             <h3>Legend</h3>
                             <h4>Манго</h4>
                             <p>Ароматная мята вмиг освежит и настроит тебя на позитивный лад</p>
+                            <div class="btnBox">
+                                <button>13гр</button>
+                                <button>20гр</button>
+                            </div>
                         </div>
                         <img src="./icon/Layer_4.png" alt="" class="bot">
                     </div>
-                    <div class="elem" id="oupanPrice" data-id="2">
+                    <div class="elem" id="oupanPrice" data-aos="zoom-out-down" data-id="2">
                         <div class="img">
                             <img src="./icon/priceTabac.png" alt="">
                         </div>
@@ -249,10 +291,14 @@
                             <h3>Legend</h3>
                             <h4>Виноград</h4>
                             <p>Ароматная мята вмиг освежит и настроит тебя на позитивный лад</p>
+                            <div class="btnBox">
+                                <button>13гр</button>
+                                <button>20гр</button>
+                            </div>
                         </div>
                         <img src="./icon/Layer_5.png" alt="" class="bot">
                     </div>
-                    <div class="elem" id="oupanPrice" data-id="3">
+                    <div class="elem" id="oupanPrice" data-aos="zoom-out-down" style="background-color:#E3083B;" data-id="3">
                         <div class="img">
                             <img src="./icon/priceTabac.png" alt="">
                         </div>
@@ -260,6 +306,10 @@
                             <h3>Legend</h3>
                             <h4>Барбарис</h4>
                             <p>Ароматная мята вмиг освежит и настроит тебя на позитивный лад</p>
+                            <div class="btnBox">
+                                <button>13гр</button>
+                                <button>20гр</button>
+                            </div>
                         </div>
                         <img src="./icon/Layer_6.png" alt="" class="bot">
                     </div>
@@ -270,11 +320,127 @@
         </section>
 
 
+        <section class="swipss">
+            <div class="cont">
+                <h2>продукты</h2>
+                <div class="swiper mySwiper1">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="elem" id="oupanPrice" data-id="0">
+                                <div class="img">
+                                    <img src="./icon/priceFon.png" alt="">
+                                </div>
+                                <div class="text">
+                                    <h3>вся продукция</h3>
+                                    <h4>Мята, персик, манго, виноград, Барбарис</h4>
+                                    <p>
+                                        Ароматная мята вмиг освежит и настроит тебя на позитивный лад
+                                    </p>
+                                    <div class="btnBox">
+                                        <button>13гр</button>
+                                        <button>20гр</button>
+                                    </div>
+                                </div>
+                                <img src="./icon/Layer_1.png" alt="" class="bot">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="elem" id="oupanPrice" style="background-color: #25764E;" data-id="0">
+                                <div class="img">
+                                    <img src="./icon/priceTabac.png" alt="">
+                                </div>
+                                <div class="text">
+                                    <h3>Legend</h3>
+                                    <h4>Мята </h4>
+                                    <p>Ароматная мята вмиг освежит и настроит тебя на позитивный лад</p>
+                                    <div class="btnBox">
+                                        <button>13гр</button>
+                                        <button>20гр</button>
+                                    </div>
+                                </div>
+                                <img src="./icon/Layer_2.png" alt="" class="bot">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="elem" id="oupanPrice" style="background-color:#F07925;" data-id="4">
+                                <div class="img">
+                                    <img src="./icon/priceTabac.png" alt="">
+                                </div>
+                                <div class="text">
+                                    <h3>Legend</h3>
+                                    <h4>Персик</h4>
+                                    <p>Ароматная мята вмиг освежит и настроит тебя на позитивный лад</p>
+                                    <div class="btnBox">
+                                        <button>13гр</button>
+                                        <button>20гр</button>
+                                    </div>
+                                </div>
+                                <img src="./icon/Layer_3.png" alt="" class="bot">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="elem" id="oupanPrice" style="background-color:#F7A902;" data-id="1">
+                                <div class="img">
+                                    <img src="./icon/priceTabac.png" alt="">
+                                </div>
+                                <div class="text">
+                                    <h3>Legend</h3>
+                                    <h4>Манго</h4>
+                                    <p>Ароматная мята вмиг освежит и настроит тебя на позитивный лад</p>
+                                    <div class="btnBox">
+                                        <button>13гр</button>
+                                        <button>20гр</button>
+                                    </div>
+                                </div>
+                                <img src="./icon/Layer_4.png" alt="" class="bot">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="elem" id="oupanPrice" style="background-color:#532D87;" data-id="2">
+                                <div class="img">
+                                    <img src="./icon/priceTabac.png" alt="">
+                                </div>
+                                <div class="text">
+                                    <h3>Legend</h3>
+                                    <h4>Виноград</h4>
+                                    <p>Ароматная мята вмиг освежит и настроит тебя на позитивный лад</p>
+                                    <div class="btnBox">
+                                        <button>13гр</button>
+                                        <button>20гр</button>
+                                    </div>
+                                </div>
+                                <img src="./icon/Layer_5.png" alt="" class="bot">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="elem" id="oupanPrice" style="background-color:#E3083B;" data-id="3">
+                                <div class="img">
+                                    <img src="./icon/priceTabac.png" alt="">
+                                </div>
+                                <div class="text">
+                                    <h3>Legend</h3>
+                                    <h4>Барбарис</h4>
+                                    <p>Ароматная мята вмиг освежит и настроит тебя на позитивный лад</p>
+                                    <div class="btnBox">
+                                        <button>13гр</button>
+                                        <button>20гр</button>
+                                    </div>
+                                </div>
+                                <img src="./icon/Layer_6.png" alt="" class="bot">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+
+
         <section class="enjoy" id="enjoy">
             <div class="cont">
-                <h2>Как использовать?!</h2>
+                <h2 data-aos="fade-down-right">Как использовать?!</h2>
                 <div class="box">
-                    <div class="blocks">
+                    <div class="blocks" data-aos="flip-up">
                         <div class="img">
                             <img src="./icon/block1.png" alt="">
                         </div>
@@ -286,7 +452,7 @@
                         </div>
                         <img src="./icon/Layer_6.png" alt="" class="fons">
                     </div>
-                    <div class="blocks">
+                    <div class="blocks" data-aos="flip-up">
                         <div class="img">
                             <img src="./icon/block2.png" alt="">
                         </div>
@@ -296,7 +462,7 @@
                         </div>
                         <img src="./icon/Layer_6.png" alt="" class="fons">
                     </div>
-                    <div class="blocks">
+                    <div class="blocks" data-aos="flip-up">
                         <div class="img">
                             <img src="./icon/block3.png" alt="">
                         </div>
@@ -332,7 +498,7 @@
         <section class="comment" id="comment">
             <div class="cont">
                 <div class="box">
-                    <div class="block">
+                    <div class="block" data-aos="fade-right">
                         <h2>ПРОИЗВОДСТВО ТАБАЧНЫХ ИЗДЕЛИЙ</h2>
                         <p>
                             Купить Табак «Табак-спб.рф» — это поставщик первоклассного и качественного табака. Мы
@@ -361,7 +527,7 @@
                             вы можете оформить заказ для самовывоза.
                         </p>
                     </div>
-                    <div class="block">
+                    <div class="block" data-aos="fade-left">
                         <img src="./icon/commentimg.png" alt="">
                     </div>
                 </div>
@@ -371,7 +537,7 @@
             <div class="cont">
                 <h2>наши преимущества</h2>
                 <div class="box">
-                    <div class="block">
+                    <div class="block" data-aos="flip-down">
                         <div class="img"><img src="./icon/imgs4.png" alt=""></div>
                         <div class="text">
                             <h4>ПРОИЗВОДСТВО И ТЕХНОЛОГИИ</h4>
@@ -382,7 +548,7 @@
                         </div>
                         <img src="./icon/Layer_6.png" alt="" class="fon">
                     </div>
-                    <div class="block">
+                    <div class="block" data-aos="flip-down">
                         <div class="img"><img src="./icon/imgs3.png" alt=""></div>
                         <div class="text">
                             <h4>ТАБАК И ДОБАВКИ</h4>
@@ -393,7 +559,7 @@
                         </div>
                         <img src="./icon/Layer_6.png" alt="" class="fon">
                     </div>
-                    <div class="block">
+                    <div class="block" data-aos="flip-down">
                         <div class="img"><img src="./icon/imgs2.png" alt=""></div>
                         <div class="text">
                             <h4>ЛЕГАЛЬНОСТЬ И МАРКИРОВКА</h4>
@@ -404,7 +570,7 @@
                         </div>
                         <img src="./icon/Layer_6.png" alt="" class="fon">
                     </div>
-                    <div class="block">
+                    <div class="block" data-aos="flip-down">
                         <div class="img"><img src="./icon/imgs1.png" alt=""></div>
                         <div class="text">
                             <h4>РАЗВИТИЕ И Надежность</h4>
@@ -424,9 +590,9 @@
                 <div class="box">
                     <div class="block">
                         <form action="">
-                            <input type="text" name="" id="" class="inp">
-                            <input type="text" name="" id="" class="inp">
-                            <input type="text" name="" id="" class="inp">
+                            <input type="email" name="" id="" placeholder="Почта" class="inp">
+                            <input type="text" name="" id="" placeholder="Имя" class="inp">
+                            <input type="text" name="" id="" placeholder="Коментарий" class="inp">
                             <button>Отправить</button>
                         </form>
                     </div>
@@ -444,7 +610,7 @@
                     </div>
                     <div class="block">
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d5848.508298798211!2d74.5708881!3d42.8674796!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2s!4v1687166665546!5m2!1sru!2s"
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2002.113470949167!2d30.3979993!3d59.8804655!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46962fc8fe048a27%3A0x268afc21e337e51c!2z0JXQktCg0J7QotCV0JogLSDQodC10YDQstC40YHQvdGL0Lkg0YbQtdC90YLRgA!5e0!3m2!1sru!2s!4v1687242184526!5m2!1sru!2s"
                             width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>

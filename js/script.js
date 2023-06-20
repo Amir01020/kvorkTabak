@@ -1,4 +1,9 @@
-
+let swipers = new Swiper(".mySwiper1", {
+    spaceBetween: 30,
+    pagination: {
+      el: ".swiper-pagination",
+    },
+  });
 
 
 let d = document
@@ -32,6 +37,8 @@ let clous = d.querySelector('#clous')
 clous.onclick=()=>{
     modalBlock.classList.remove('modalActiv')
 }
-
-
-
+let modalUp = d.querySelector('.modalUp')
+let btnNext = d.querySelector('#btnNext')
+btnNext.onclick=()=>{
+    modalUp.style.display = 'none'
+}
