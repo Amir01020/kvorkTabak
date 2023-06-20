@@ -5,6 +5,10 @@
   transition: all 0.5s;
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
 @font-face {
   font-family: "grec";
   src: url("../font/dsgreece.ttf");
@@ -1400,6 +1404,16 @@ footer .box .block p {
   }
   .swipss {
     display: block !important;
+  }
+  .modalUp h2 {
+    font-size: 50px;
+  }
+  .modalUp .box p {
+    font-size: 16px;
+  }
+  .modalUp .box .btnBox {
+    flex-wrap: wrap;
+    gap: 20px;
   }
 }
 @media (max-width: 455px) {

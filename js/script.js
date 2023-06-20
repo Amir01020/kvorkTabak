@@ -50,3 +50,13 @@ clouse.onclick = () => {
     burgerMenu.classList.toggle('burgerMenuActive')
     clouse.classList.toggle('div1')
 }
+
+
+
+let arrov = d.querySelectorAll('#arrov')
+arrov.forEach(i => {
+    i.onclick = () => {
+        burgerMenu.classList.remove('burgerMenuActive')
+        clouse.classList.remove('div1')
+    }
+});
