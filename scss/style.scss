@@ -3,7 +3,6 @@
   padding: 0;
   box-sizing: border-box;
   transition: all 0.5s;
-
 }
 
 @mixin flex($a, $s) {
@@ -13,8 +12,8 @@
 }
 
 @font-face {
-  font-family: 'grec';
-  src: url('../font/dsgreece.ttf');
+  font-family: "grec";
+  src: url("../font/dsgreece.ttf");
   font-weight: normal;
   font-style: normal;
 }
@@ -24,13 +23,13 @@ li {
 }
 
 header {
-  font-family: 'Raleway';
+  font-family: "Raleway";
   position: fixed;
   width: 100%;
   background: linear-gradient(0deg, rgba(196, 196, 196, 0.137) 23%, rgba(255, 255, 255, 1) 100%);
   -webkit-backdrop-filter: blur(40px);
   backdrop-filter: blur(40px);
-  z-index: 11;
+  z-index: 0;
 
   nav {
     max-width: 1440px;
@@ -43,7 +42,7 @@ header {
     }
 
     ul {
-      &:nth-child(1) {}
+
 
       &:nth-child(2) {
         @include flex(center, center);
@@ -56,7 +55,7 @@ header {
           text-decoration: none;
           color: #000;
           text-transform: uppercase;
-          font-feature-settings: 'pnum' on, 'lnum' on;
+          font-feature-settings: "pnum" on, "lnum" on;
         }
       }
 
@@ -68,11 +67,10 @@ header {
           text-decoration: none;
           color: #000;
           text-transform: uppercase;
-          font-feature-settings: 'pnum' on, 'lnum' on;
+          font-feature-settings: "pnum" on, "lnum" on;
         }
       }
     }
-
   }
 }
 
@@ -89,15 +87,16 @@ main {
   background-position: top right;
   background-size: 100%;
   background-repeat: no-repeat;
-  font-family: 'grec';
+  font-family: "grec";
 
   .head {
+    height: 100vh;
     .block {
       position: relative;
       width: 500px;
 
       img {
-        width: 100%;
+        width: 50%;
         margin-bottom: 41px;
       }
 
@@ -115,7 +114,7 @@ main {
         font-size: 166.725px;
         line-height: 100%;
         text-transform: uppercase;
-        color: #1D3772;
+        color: #1d3772;
       }
 
       h2 {
@@ -124,7 +123,6 @@ main {
         line-height: 100%;
         text-transform: uppercase;
         color: #000000;
-
       }
     }
   }
@@ -138,7 +136,7 @@ main {
       line-height: 100%;
       text-transform: uppercase;
       text-align: right;
-      color: #FFFFFF;
+      color: #ffffff;
       margin-bottom: 30px;
     }
 
@@ -154,7 +152,7 @@ main {
         cursor: pointer;
         transition: all 1s !important;
         .text {
-          color: #FFFFFF;
+          color: #ffffff;
           padding: 0 20px;
 
           h3 {
@@ -162,22 +160,21 @@ main {
             font-size: 80.4707px;
             line-height: 100%;
             text-transform: uppercase;
-            color: #FFFFFF;
+            color: #ffffff;
           }
 
           h4 {
             font-weight: 700;
             font-size: 31.4312px;
             line-height: 100%;
-            font-family: 'Raleway';
-            color: #FFFFFF;
+            font-family: "Raleway";
+            color: #ffffff;
 
             opacity: 0.6;
-
           }
 
           p {
-            font-family: 'Raleway';
+            font-family: "Raleway";
             font-weight: 400;
             font-size: 16px;
             line-height: 100%;
@@ -198,7 +195,7 @@ main {
               border: 0;
               font-size: 18px;
               font-weight: 400;
-              font-family: 'grec';
+              font-family: "grec";
               cursor: pointer;
             }
           }
@@ -214,7 +211,7 @@ main {
 
         &:nth-child(1) {
           grid-column: 1/3;
-          background: #1D3772;
+          background: #1d3772;
 
           .text {
             margin-top: 42px;
@@ -224,13 +221,11 @@ main {
                 width: 30%;
               }
             }
-
           }
-
         }
 
         &:nth-child(2) {
-          background-color: #25764E;
+          background-color: #25764e;
 
           .img {
             margin-bottom: 30px;
@@ -238,15 +233,15 @@ main {
         }
 
         &:nth-child(3) {
-          background-color: #F07925;
+          background-color: #f07925;
         }
 
         &:nth-child(4) {
-          background-color: #F7A902;
+          background-color: #f7a902;
         }
 
         &:nth-child(5) {
-          background-color: #532D87;
+          background-color: #532d87;
         }
 
         .img {
@@ -255,9 +250,7 @@ main {
           img {
             width: 100%;
           }
-
         }
-
 
         &:hover {
           transform: scale(1.01);
@@ -277,7 +270,7 @@ main {
       line-height: 100%;
       text-transform: uppercase;
       text-align: right;
-      color: #FFFFFF;
+      color: #ffffff;
       margin-bottom: 30px;
       margin-top: 50px;
     }
@@ -296,7 +289,7 @@ main {
             cursor: pointer;
 
             .text {
-              color: #FFFFFF;
+              color: #ffffff;
               padding: 0 20px;
 
               h3 {
@@ -304,22 +297,21 @@ main {
                 font-size: 80.4707px;
                 line-height: 100%;
                 text-transform: uppercase;
-                color: #FFFFFF;
+                color: #ffffff;
               }
 
               h4 {
                 font-weight: 700;
                 font-size: 31.4312px;
                 line-height: 100%;
-                font-family: 'Raleway';
-                color: #FFFFFF;
+                font-family: "Raleway";
+                color: #ffffff;
 
                 opacity: 0.6;
-
               }
 
               p {
-                font-family: 'Raleway';
+                font-family: "Raleway";
                 font-weight: 400;
                 font-size: 16px;
                 line-height: 100%;
@@ -340,7 +332,7 @@ main {
                   border: 0;
                   font-size: 18px;
                   font-weight: 400;
-                  font-family: 'grec';
+                  font-family: "grec";
                   cursor: pointer;
                 }
               }
@@ -356,7 +348,7 @@ main {
 
             &:nth-child(1) {
               grid-column: 1/3;
-              background: #1D3772;
+              background: #1d3772;
 
               .text {
                 margin-top: 42px;
@@ -366,13 +358,11 @@ main {
                     width: 30%;
                   }
                 }
-
               }
-
             }
 
             &:nth-child(2) {
-              background-color: #25764E;
+              background-color: #25764e;
 
               .img {
                 margin-bottom: 30px;
@@ -380,15 +370,15 @@ main {
             }
 
             &:nth-child(3) {
-              background-color: #F07925;
+              background-color: #f07925;
             }
 
             &:nth-child(4) {
-              background-color: #F7A902;
+              background-color: #f7a902;
             }
 
             &:nth-child(5) {
-              background-color: #532D87;
+              background-color: #532d87;
             }
 
             .img {
@@ -397,9 +387,7 @@ main {
               img {
                 width: 100%;
               }
-
             }
-
 
             &:hover {
               transform: scale(1.01);
@@ -422,7 +410,7 @@ main {
       font-size: 100px;
       line-height: 100%;
       text-transform: uppercase;
-      color: #FFFFFF;
+      color: #ffffff;
     }
 
     .box {
@@ -443,11 +431,11 @@ main {
             }
 
             &:nth-child(2) {
-              background-color: #1D3772;
+              background-color: #1d3772;
             }
 
             &:nth-child(3) {
-              background-color: #532D87;
+              background-color: #532d87;
             }
           }
         }
@@ -461,7 +449,7 @@ main {
             font-size: 39.0625px;
             line-height: 100%;
             color: #fff;
-            font-family: 'Raleway';
+            font-family: "Raleway";
 
             .swiper-pagination-current {
               font-weight: 400;
@@ -480,7 +468,7 @@ main {
       font-size: 70px;
       line-height: 100%;
       text-transform: uppercase;
-      color: #FFFFFF;
+      color: #ffffff;
       margin-bottom: 20px;
     }
 
@@ -500,15 +488,15 @@ main {
         }
 
         &:nth-child(1) {
-          background: #532D87;
+          background: #532d87;
         }
 
         &:nth-child(2) {
-          background: #25764E;
+          background: #25764e;
         }
 
         &:nth-child(3) {
-          background: #E3083B;
+          background: #e3083b;
         }
 
         .img {
@@ -528,7 +516,7 @@ main {
             font-size: 24px;
             line-height: 100%;
             text-transform: uppercase;
-            color: #FFFFFF;
+            color: #ffffff;
             margin-bottom: 10px;
           }
 
@@ -538,12 +526,10 @@ main {
             line-height: 130%;
             text-transform: uppercase;
 
-            color: #FFFFFF;
+            color: #ffffff;
 
             opacity: 0.6;
-
           }
-
         }
 
         .fons {
@@ -574,22 +560,20 @@ main {
 
       .img {
         padding: 2px 5px;
-        background-color: #F7A902;
+        background-color: #f7a902;
       }
 
       .text {
         @include flex(center, center);
         flex-direction: column;
         gap: 3px;
-
       }
-
     }
 
     .comentbox {
       width: 100%;
       height: 52.66px;
-      background-color: #F7A902;
+      background-color: #f7a902;
       @include flex(center, center);
 
       img {
@@ -600,7 +584,7 @@ main {
 
   .comment {
     margin-top: 200px;
-    background-color: #1D3772;
+    background-color: #1d3772;
 
     .box {
       @include flex(center, center);
@@ -614,7 +598,7 @@ main {
           font-size: 16px;
           line-height: 100%;
           color: #fff;
-          font-family: 'Raleway';
+          font-family: "Raleway";
           margin-top: 20px;
         }
 
@@ -627,17 +611,15 @@ main {
           font-size: 70px;
           line-height: 100%;
           text-transform: uppercase;
-          color: #FFFFFF;
+          color: #ffffff;
         }
       }
-
-
     }
   }
 
   .prevue {
     padding-top: 200px;
-    background-color: #1D3772;
+    background-color: #1d3772;
 
     h2 {
       font-weight: 400;
@@ -665,19 +647,19 @@ main {
         }
 
         &:nth-child(1) {
-          background-color: #532D87;
+          background-color: #532d87;
         }
 
         &:nth-child(2) {
-          background: #25764E;
+          background: #25764e;
         }
 
         &:nth-child(3) {
-          background: #E3083B;
+          background: #e3083b;
         }
 
         &:nth-child(4) {
-          background: #F07925;
+          background: #f07925;
         }
 
         .img {
@@ -687,10 +669,7 @@ main {
           img {
             max-width: 100%;
             width: auto;
-
           }
-
-
         }
 
         .text {
@@ -701,7 +680,6 @@ main {
             font-size: 23px;
             line-height: 100%;
             color: #fff;
-
           }
 
           p {
@@ -711,7 +689,6 @@ main {
             color: #fff;
             margin-top: 10px;
             opacity: 0.6;
-
           }
         }
 
@@ -728,32 +705,39 @@ main {
 
   .contact {
     padding-top: 160px;
-    background-color: #1D3772;
+    background-color: #1d3772;
 
     h2 {
       font-weight: 400;
       font-size: 70px;
       line-height: 100%;
       text-transform: uppercase;
-      color: #FFFFFF;
+      color: #ffffff;
       margin-bottom: 30px;
     }
 
     .box {
       display: flex;
       gap: 20px;
-
+      min-height: 333px;
       .block {
         &:nth-child(1) {
           width: 30%;
+          height: 100%;
           display: flex;
           flex-direction: column;
           justify-content: space-between;
+          form {
+            height: 333px ;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+          }
         }
 
         &:nth-child(2) {
           width: 25%;
-          background-color: #F7A902;
+          background-color: #f7a902;
           height: fit-content;
 
           .text {
@@ -767,7 +751,7 @@ main {
             font-size: 16px;
             line-height: 100%;
             text-transform: uppercase;
-            color: #FFFFFF;
+            color: #ffffff;
             text-decoration: none;
             margin-bottom: 21px;
           }
@@ -777,7 +761,6 @@ main {
             font-size: 16px;
             line-height: 100%;
             color: #fff;
-
           }
 
           img {
@@ -792,7 +775,6 @@ main {
           iframe {
             width: 100%;
             height: 100%;
-
           }
         }
 
@@ -800,27 +782,26 @@ main {
           display: block;
           width: 100%;
           height: 20%;
-          border: 1px solid #D9D9D9;
+          border: 1px solid #d9d9d9;
           padding: 20px;
           font-size: 18px;
-          font-family: 'grec';
+          font-family: "grec";
           color: #fff;
           background-color: transparent;
           position: relative;
           margin-bottom: 20px;
-          background-image: url(../icon/iconLaen.png);
+          background-image: url(../icon/Vector\ \(4\).svg);
           background-position: right;
           background-size: auto 100%;
           background-repeat: no-repeat;
-
         }
 
         button {
-          font-family: 'grec';
+          font-family: "grec";
           width: 100%;
           height: 56px;
-          background: #FFFFFF;
-          color: #1D3772;
+          background: #ffffff;
+          color: #1d3772;
           font-weight: 400;
           font-size: 16px;
           line-height: 100%;
@@ -832,7 +813,7 @@ main {
 }
 
 footer {
-  background-color: #1D3772;
+  background-color: #1d3772;
   padding: 20px;
 
   .box {
@@ -843,9 +824,8 @@ footer {
 
       &:nth-child(3) {
         p {
-          font-family: 'Raleway';
+          font-family: "Raleway";
         }
-
       }
 
       p {
@@ -853,7 +833,7 @@ footer {
         font-size: 16px;
         line-height: 20px;
         color: #fff;
-        font-family: 'grec';
+        font-family: "grec";
       }
 
       gap: 10px;
@@ -880,7 +860,7 @@ footer {
   background-position: center;
 
   &::after {
-    content: '';
+    content: "";
     display: block;
     position: absolute;
     width: 100%;
@@ -903,7 +883,7 @@ footer {
       font-weight: 400;
       font-size: 24px;
       line-height: 100%;
-      font-family: 'grec';
+      font-family: "grec";
       margin-top: 20px;
       margin-bottom: 100px;
     }
@@ -919,7 +899,7 @@ footer {
         font-weight: 400;
         font-size: 25px;
         line-height: 100%;
-        font-family: 'grec';
+        font-family: "grec";
         color: #fff;
         cursor: pointer;
         background-image: url(../icon/Vector\ \(4\).svg);
@@ -927,7 +907,6 @@ footer {
         background-size: auto 100%;
         background-position: right;
       }
-
     }
   }
 
@@ -936,7 +915,7 @@ footer {
     font-weight: 400;
     font-size: 70px;
     line-height: 100%;
-    font-family: 'grec';
+    font-family: "grec";
   }
 }
 
@@ -998,8 +977,6 @@ footer {
           position: relative;
           width: 20%;
           height: fit-content;
-
-
         }
 
         .text {
@@ -1012,9 +989,9 @@ footer {
           position: relative;
           z-index: 5;
           text-shadow: 0 0 10px #000;
-          color: #FFFFFF;
+          color: #ffffff;
           margin-top: 5%;
-          font-family: 'grec';
+          font-family: "grec";
         }
 
         .sirclssa {
@@ -1039,7 +1016,7 @@ footer {
 
         .textUpper {
           position: absolute;
-          font-family: 'Raleway';
+          font-family: "Raleway";
           color: #fff;
           font-weight: 900;
           font-size: 249.414px;
@@ -1051,7 +1028,7 @@ footer {
 
         .textLover {
           position: absolute;
-          font-family: 'Raleway';
+          font-family: "Raleway";
           color: #fff;
           font-weight: 900;
           font-size: 249.414px;
@@ -1076,13 +1053,12 @@ footer {
           transform: rotate(180deg);
         }
 
-        &:nth-child(1) {}
+        
 
         &:nth-child(2) {
-
           .textUpper {
             position: absolute;
-            font-family: 'Raleway';
+            font-family: "Raleway";
             color: #fff;
             font-weight: 900;
             font-size: 249.414px;
@@ -1094,7 +1070,7 @@ footer {
 
           .textLover {
             position: absolute;
-            font-family: 'Raleway';
+            font-family: "Raleway";
             color: #fff;
             font-weight: 900;
             font-size: 249.414px;
@@ -1138,14 +1114,12 @@ footer {
             transform: rotate(-90deg);
             filter: blur(5px);
           }
-
         }
 
         &:nth-child(3) {
-
           .textUpper {
             position: absolute;
-            font-family: 'Raleway';
+            font-family: "Raleway";
             color: #fff;
             font-weight: 900;
             font-size: 149.414px;
@@ -1157,7 +1131,7 @@ footer {
 
           .textLover {
             position: absolute;
-            font-family: 'Raleway';
+            font-family: "Raleway";
             color: #fff;
             font-weight: 900;
             font-size: 149.414px;
@@ -1201,14 +1175,12 @@ footer {
             transform: rotate(-90deg);
             filter: blur(5px);
           }
-
         }
 
         &:nth-child(4) {
-
           .textUpper {
             position: absolute;
-            font-family: 'Raleway';
+            font-family: "Raleway";
             color: #fff;
             font-weight: 900;
             font-size: 149.414px;
@@ -1220,7 +1192,7 @@ footer {
 
           .textLover {
             position: absolute;
-            font-family: 'Raleway';
+            font-family: "Raleway";
             color: #fff;
             font-weight: 900;
             font-size: 149.414px;
@@ -1264,14 +1236,12 @@ footer {
             transform: rotate(-90deg);
             filter: blur(5px);
           }
-
         }
 
         &:nth-child(5) {
-
           .textUpper {
             position: absolute;
-            font-family: 'Raleway';
+            font-family: "Raleway";
             color: #fff;
             font-weight: 900;
             font-size: 249.414px;
@@ -1283,7 +1253,7 @@ footer {
 
           .textLover {
             position: absolute;
-            font-family: 'Raleway';
+            font-family: "Raleway";
             color: #fff;
             font-weight: 900;
             font-size: 149.414px;
@@ -1327,7 +1297,6 @@ footer {
             transform: rotate(-90deg);
             filter: blur(5px);
           }
-
         }
       }
     }
@@ -1348,8 +1317,6 @@ footer {
       }
     }
   }
-
-
 }
 
 @keyframes runScrol {
@@ -1374,7 +1341,6 @@ footer {
     left: 0%;
     opacity: 1;
   }
-
 }
 
 @keyframes animeright {
@@ -1401,7 +1367,6 @@ footer {
   }
 }
 
-
 @media (max-width: 1200px) {
   .textUpper {
     display: none !important;
@@ -1417,7 +1382,6 @@ footer {
       display: block;
     }
   }
-
 }
 
 @media (max-width: 940px) {
@@ -1428,7 +1392,7 @@ footer {
   }
 
   .enjoy {
-    background-color: #1D3772;
+    background-color: #1d3772;
   }
 
   .comment {
@@ -1528,7 +1492,6 @@ footer {
 }
 
 @media (max-width: 720px) {
-
   main .contact .box {
     .block {
       width: 100% !important;
@@ -1546,6 +1509,11 @@ footer {
   .enjoy {
     margin: 0;
     padding-top: 100px;
+  }
+  main .contact .box .block:nth-child(3){
+    iframe{
+      height: 333px;
+    }
   }
 }
 
@@ -1578,8 +1546,6 @@ footer {
     opacity: 0.8;
   }
 
-  
-
   main .enjoy h2 {
     font-size: 45px;
   }
@@ -1603,7 +1569,6 @@ footer {
       font-weight: 400;
       font-size: 55px;
       line-height: 100%;
-
     }
   }
 
@@ -1613,7 +1578,7 @@ footer {
       font-weight: 900;
       font-size: 53.5714px;
       line-height: 100%;
-      font-family: 'Raleway';
+      font-family: "Raleway";
     }
 
     font-weight: 400;
