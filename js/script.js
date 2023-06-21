@@ -60,3 +60,99 @@ arrov.forEach(i => {
         clouse.classList.remove('div1')
     }
 });
+
+let arr = [
+    {
+        name: 'Наименование предприятия',
+        comment: 'Общество с ограниченной ответственностью "Афина"',
+        id: ''
+    }, {
+        name: 'Юридический адрес',
+        comment: '192236, г Санкт-ПетербургВН.Тер.Г.Муниципальный округ Волковское, ул Белы Куна, Д 32 Литера М, помещ 76',
+        id: ''
+    }, {
+        name: 'ИНН',
+        comment: '7816733929',
+        id: ''
+    }, {
+        name: 'КПП',
+        comment: '781601001',
+        id: ''
+    }, {
+        name: 'ОГРН',
+        comment: '1227800115168',
+        id: ''
+    }, {
+        name: 'ОКПО',
+        comment: '75993674',
+        id: ''
+    }, {
+        name: 'ОКТМО',
+        comment: '40902000000',
+        id: ''
+    }, {
+        name: 'ОКАТО',
+        comment: '40296000000',
+        id: ''
+    }, {
+        name: 'Банк',
+        comment: 'ТОЧКА ПАО БАНКА "ФК ОТКРЫТИЕ" г Москва',
+        id: ''
+    }, {
+        name: 'БИК',
+        comment: '044525104',
+        id: ''
+    }, {
+        name: 'Расчетный счет',
+        comment: '40702810701500147198',
+        id: ''
+    }, {
+        name: 'Корр. счет',
+        comment: '30101810745374525104',
+        id: ''
+    }, {
+        name: 'Генеральный директор',
+        comment: 'Васюткин Иван Владимирович',
+        id: ''
+    }, {
+        name: 'Главный бухгалтер',
+        comment: 'Васюткин Иван Владимирович',
+        id: ''
+    }, {
+        name: 'Контакты',
+        comment: '8 (952) 282-38-23',
+        id: ''
+    },
+]
+
+let http = ''
+let mains = d.querySelector('#mains')
+function creayt(name,comment,id) {
+    http +=`
+                        <div class="block btnClickComment" id="${id}">
+                            <div class="elem"><h3>${name}</h3> <i class="gg-arrow-down-r"></i> </div>
+                            <div class="elems" id="ddddddd" data-id="${id}">
+                                <p>${comment}</p>
+                            </div>
+                        </div>
+    `
+    mains.innerHTML = http
+
+}
+arr.forEach((i,item) => {
+    i.id = item
+
+    creayt(i.name,i.comment,i.id)
+    let btnClickComment = d.querySelectorAll('.btnClickComment')
+    let btt = d.querySelectorAll('#ddddddd')
+    btnClickComment.forEach((i)=>{
+        i.onclick=()=>{
+            for(let y of btt){
+                if (y.dataset.id == i.id) {
+                    y.classList.toggle('elems1')
+                }
+            }
+        }
+    })
+
+});

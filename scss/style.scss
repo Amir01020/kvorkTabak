@@ -911,6 +911,49 @@ main {
       }
     }
   }
+
+  .tabl{
+    width: 100%;
+    padding-top: 100px;
+    background-color: #1D3772;
+    font-family: 'Raleway';
+    .tabls{
+      color: #fff;
+      .mains{
+        width: 100%;
+        
+        padding: 20px 0;
+        .block{
+          max-width:600px; 
+          padding:10px ;
+          border: #fff solid 2px;
+          margin-bottom: 20px;
+          cursor: pointer;
+          h3{
+            font-size: 25px;
+          }
+          .elem{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+          }
+          .elems{
+            height: 0;
+            overflow: hidden;
+          }
+          .elems1{
+            margin-top: 10px;
+            font-size: 12px;
+            height: auto;
+            cursor: pointer;
+            margin-bottom: 10px;
+            
+          }
+          
+        }
+      }
+    }
+  }
 }
 
 footer {

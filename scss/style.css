@@ -758,6 +758,45 @@ main .contact .box .block button {
   line-height: 100%;
   border: 0;
 }
+main .tabl {
+  width: 100%;
+  padding-top: 100px;
+  background-color: #1D3772;
+  font-family: "Raleway";
+}
+main .tabl .tabls {
+  color: #fff;
+}
+main .tabl .tabls .mains {
+  width: 100%;
+  padding: 20px 0;
+}
+main .tabl .tabls .mains .block {
+  max-width: 600px;
+  padding: 10px;
+  border: #fff solid 2px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+main .tabl .tabls .mains .block h3 {
+  font-size: 25px;
+}
+main .tabl .tabls .mains .block .elem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .tabl .tabls .mains .block .elems {
+  height: 0;
+  overflow: hidden;
+}
+main .tabl .tabls .mains .block .elems1 {
+  margin-top: 10px;
+  font-size: 12px;
+  height: auto;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
 
 footer {
   background-color: #1d3772;
