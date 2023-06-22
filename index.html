@@ -609,11 +609,11 @@
                 <h2>Контакты</h2>
                 <div class="box">
                     <div class="block" id="foot">
-                        <form action="">
-                            <input type="email" name="" id="gmail" placeholder="Почта" class="inp">
-                            <input type="text" name="" id="user" placeholder="Имя" class="inp">
-                            <input type="text" name="" id="tel" placeholder="Ваш номер телефона" class="inp">
-                            <button id="submit">Отправить</button>
+                        <form action="mail.php" method="post">
+                            <input type="email" name="user_gmail" id="gmail" placeholder="Почта" class="inp">
+                            <input type="text" name="user_name" id="user" placeholder="Имя" class="inp">
+                            <input type="text" name="user_email" id="tel" placeholder="Ваш номер телефона" class="inp">
+                            <button type="submit" id="submit">Отправить</button>
                         </form>
                     </div>
                     <div class="block">

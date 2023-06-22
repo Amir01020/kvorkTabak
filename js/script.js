@@ -135,35 +135,35 @@ let arr = [
 
 
 
-let data = {
-    name: '',
-    gmail: '',
-    tel: '',
-    id: ''
-}
-let user = d.querySelector('#user')
-    , gmail = d.querySelector('#gmail')
-    , tel = d.querySelector('#tel')
-    , submit = d.querySelector('#submit')
-function post(event) {
-    event.preventDefault()
-    if (gmail.value !== '' && user.value !== '' && tel.value !== '') {
+// let data = {
+//     name: '',
+//     gmail: '',
+//     tel: '',
+//     id: ''
+// }
+// let user = d.querySelector('#user')
+//     , gmail = d.querySelector('#gmail')
+//     , tel = d.querySelector('#tel')
+//     , submit = d.querySelector('#submit')
+// function post(event) {
+//     event.preventDefault()
+//     if (gmail.value !== '' && user.value !== '' && tel.value !== '') {
         
-        data.gmail = gmail.value
-        data.name = user.value
-        data.tel = tel.value
-        axios.post('', data)
-        alert('Всё отлично данные отправлены')
+//         data.gmail = gmail.value
+//         data.name = user.value
+//         data.tel = tel.value
+//         axios.post('', data)
+//         alert('Всё отлично данные отправлены')
 
-        gmail.value = ''
-        user.value = ''
-        tel.value = ''
+//         gmail.value = ''
+//         user.value = ''
+//         tel.value = ''
 
-    }else{
+//     }else{
         
-        alert('не все данные введены ')
-    }
+//         alert('не все данные введены ')
+//     }
 
     
-}
-submit.addEventListener('click', post)
+// }
+// submit.addEventListener('click', post)
