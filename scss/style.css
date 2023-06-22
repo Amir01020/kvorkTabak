@@ -783,7 +783,7 @@ main .tabl .tabls .mains .block:nth-child(2) {
   justify-content: center;
 }
 main .tabl .tabls .mains .block .elem {
-  width: 33%;
+  width: 100%;
   text-align: center;
 }
 main .tabl .tabls .mains .block .elem p {

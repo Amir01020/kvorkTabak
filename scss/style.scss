@@ -911,7 +911,7 @@ main {
       }
     }
   }
-  
+
   .tabl{
     width: 100%;
     padding-top: 100px;
@@ -931,7 +931,7 @@ main {
             @include flex( cover,center );
           }
           .elem{
-            width: 33%;
+            width: 100%;
             text-align: center;
             p{
               font-size: 20px;
