@@ -772,35 +772,47 @@ main .tabl .tabls .mains {
   padding: 20px 0;
 }
 main .tabl .tabls .mains .block {
-  max-width: 600px;
-  padding: 10px;
-  border: #fff solid 2px;
-  margin-bottom: 20px;
-  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 50px;
+  font-family: "Raleway";
 }
-main .tabl .tabls .mains .block h3 {
-  font-size: 25px;
+main .tabl .tabls .mains .block:nth-child(2) {
+  display: flex;
+  align-items: cover;
+  justify-content: center;
 }
 main .tabl .tabls .mains .block .elem {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  width: 33%;
+  text-align: center;
 }
-main .tabl .tabls .mains .block .elems {
-  height: 0;
-  overflow: hidden;
+main .tabl .tabls .mains .block .elem p {
+  font-size: 20px;
+  color: #fff;
+  line-height: 200%;
 }
-main .tabl .tabls .mains .block .elems1 {
-  margin-top: 10px;
-  font-size: 12px;
-  height: auto;
-  cursor: pointer;
-  margin-bottom: 10px;
+main .tabl .tabls .mains .block .elem a {
+  font-size: 20px;
+  color: #fff;
+  line-height: 200%;
+  text-decoration: none;
+}
+main .tabl .tabls .mains .block p {
+  font-size: 20px;
+  color: #fff;
+  line-height: 200%;
+}
+main .tabl .tabls .mains .block a {
+  font-size: 20px;
+  color: #fff;
+  line-height: 200%;
+  text-decoration: none;
 }
 
 footer {
   background-color: #1d3772;
   padding: 20px;
+  border-top: 1px solid #fff;
 }
 footer .box {
   display: flex;

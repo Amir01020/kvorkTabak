@@ -101,34 +101,69 @@ let arr = [
     },
 ]
 
-let http = ''
-let mains = d.querySelector('#mains')
-function creayt(name,comment,id) {
-    http +=`
-                        <div class="block btnClickComment" id="${id}">
-                            <div class="elem"><h3>${name}</h3> <i class="gg-arrow-down-r"></i> </div>
-                            <div class="elems" id="ddddddd" data-id="${id}">
-                                <p>${comment}</p>
-                            </div>
-                        </div>
-    `
-    mains.innerHTML = http
+// let http = ''
+// let mains = d.querySelector('#mains')
+// function creayt(name,comment,id) {
+//     http +=`
+//                         <div class="block btnClickComment" id="${id}">
+//                             <div class="elem"><h3>${name}</h3> <i class="gg-arrow-down-r"></i> </div>
+//                             <div class="elems" id="ddddddd" data-id="${id}">
+//                                 <p>${comment}</p>
+//                             </div>
+//                         </div>
+//     `
+//     mains.innerHTML = http
 
+// }
+// arr.forEach((i,item) => {
+//     i.id = item
+
+//     creayt(i.name,i.comment,i.id)
+//     let btnClickComment = d.querySelectorAll('.btnClickComment')
+//     let btt = d.querySelectorAll('#ddddddd')
+//     btnClickComment.forEach((i)=>{
+//         i.onclick=()=>{
+//             for(let y of btt){
+//                 if (y.dataset.id == i.id) {
+//                     y.classList.toggle('elems1')
+//                 }
+//             }
+//         }
+//     })
+
+// });
+
+
+
+let data = {
+    name: '',
+    gmail: '',
+    tel: '',
+    id: ''
 }
-arr.forEach((i,item) => {
-    i.id = item
+let user = d.querySelector('#user')
+    , gmail = d.querySelector('#gmail')
+    , tel = d.querySelector('#tel')
+    , submit = d.querySelector('#submit')
+function post(event) {
+    event.preventDefault()
+    if (gmail.value !== '' && user.value !== '' && tel.value !== '') {
+        
+        data.gmail = gmail.value
+        data.name = user.value
+        data.tel = tel.value
+        axios.post('', data)
+        alert('Всё отлично данные отправлены')
 
-    creayt(i.name,i.comment,i.id)
-    let btnClickComment = d.querySelectorAll('.btnClickComment')
-    let btt = d.querySelectorAll('#ddddddd')
-    btnClickComment.forEach((i)=>{
-        i.onclick=()=>{
-            for(let y of btt){
-                if (y.dataset.id == i.id) {
-                    y.classList.toggle('elems1')
-                }
-            }
-        }
-    })
+        gmail.value = ''
+        user.value = ''
+        tel.value = ''
 
-});
+    }else{
+        
+        alert('не все данные введены ')
+    }
+
+    
+}
+submit.addEventListener('click', post)

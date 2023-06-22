@@ -911,7 +911,7 @@ main {
       }
     }
   }
-
+  
   .tabl{
     width: 100%;
     padding-top: 100px;
@@ -924,31 +924,41 @@ main {
         
         padding: 20px 0;
         .block{
-          max-width:600px; 
-          padding:10px ;
-          border: #fff solid 2px;
-          margin-bottom: 20px;
-          cursor: pointer;
-          h3{
-            font-size: 25px;
+          width: 100%;
+          text-align: center;
+          padding-bottom: 50px;
+          &:nth-child(2){
+            @include flex( cover,center );
           }
           .elem{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            width: 33%;
+            text-align: center;
+            p{
+              font-size: 20px;
+              color: #fff;
+              line-height: 200%;
+            }
+            a{
+              font-size: 20px;
+              color: #fff;
+              line-height: 200%;
+              text-decoration: none;
+            }
+
           }
-          .elems{
-            height: 0;
-            overflow: hidden;
+          font-family: 'Raleway';
+          p{
+            font-size: 20px;
+            color: #fff;
+            line-height: 200%;
           }
-          .elems1{
-            margin-top: 10px;
-            font-size: 12px;
-            height: auto;
-            cursor: pointer;
-            margin-bottom: 10px;
-            
+          a{
+            font-size: 20px;
+            color: #fff;
+            line-height: 200%;
+            text-decoration: none;
           }
+        
           
         }
       }
@@ -959,7 +969,7 @@ main {
 footer {
   background-color: #1d3772;
   padding: 20px;
-
+  border-top: 1px solid #fff;
   .box {
     @include flex(center, space-between);
 
